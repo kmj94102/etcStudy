@@ -3,6 +3,9 @@ package com.example.etcstudy
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.etcstudy.databinding.ActivityMainBinding
+import com.example.etcstudy.image_scroll.ImageScrollActivity
+import com.example.etcstudy.transform.TransformActivity
+import com.example.etcstudy.util.startActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,15 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val adapter = ImageAdapter()
-        val list = mutableListOf<ImageItem>()
-        binding.recyclerView.adapter = adapter
+        with(binding){
+            btnImageScroll.setOnClickListener {
+                startActivity<ImageScrollActivity>()
+                finish()
+            }
 
-        for(i in 0..20){
-            list.add(ImageItem(imageRes = R.drawable.bg_img))
+            btnTransformation.setOnClickListener {
+                startActivity<TransformActivity>()
+                finish()
+            }
         }
-
-        adapter.submitList(list)
 
     }
 }

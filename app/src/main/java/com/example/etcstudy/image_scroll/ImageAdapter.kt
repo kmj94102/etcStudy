@@ -1,4 +1,4 @@
-package com.example.etcstudy
+package com.example.etcstudy.image_scroll
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.etcstudy.databinding.CellImageBinding
-import com.example.etcstudy.scoll_image.VerticalParallaxTransformer
 
 class ImageAdapter : ListAdapter<ImageItem, ImageAdapter.ImageViewHolder>(diffUtil) {
     inner class ImageViewHolder(private val binding : CellImageBinding) : RecyclerView.ViewHolder(binding.root){

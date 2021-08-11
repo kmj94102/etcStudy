@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EtcStudy">
         <activity
+            android:name=".transform.TransformDetailActivity"
+            android:exported="true" />
+        <activity
+            android:name=".transform.TransformActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".image_scroll.ImageScrollActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

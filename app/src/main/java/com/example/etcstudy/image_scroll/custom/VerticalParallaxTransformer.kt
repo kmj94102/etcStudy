@@ -1,4 +1,4 @@
-package com.example.etcstudy.scoll_image
+package com.example.etcstudy.image_scroll.custom
 
 import android.graphics.Canvas
 import android.widget.ImageView
