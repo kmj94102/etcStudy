@@ -10,6 +10,7 @@ class VerticalParallaxTransformer : ViewTransformer() {
     }
 
     override fun apply(view: ScrollTransformImageView, canvas: Canvas, viewX : Int, viewY : Int) {
+        if(view.drawable == null) return
         if (view.scaleType == ImageView.ScaleType.CENTER_CROP) {
             val imageWidth = view.drawable.intrinsicWidth
             val imageHeight = view.drawable.intrinsicHeight

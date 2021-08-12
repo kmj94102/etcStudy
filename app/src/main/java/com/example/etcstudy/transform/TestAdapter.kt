@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.etcstudy.databinding.CellTestBinding
+import com.example.etcstudy.util.transformStartActivity
 
 class TestAdapter : ListAdapter<TestItem, TestAdapter.ViewHolder>(diffUtil) {
 
@@ -21,11 +22,8 @@ class TestAdapter : ListAdapter<TestItem, TestAdapter.ViewHolder>(diffUtil) {
             binding.root.setOnClickListener {
                 val now = SystemClock.elapsedRealtime()
                 if (now - previousTime >= binding.transLayoutTestItem.duration) {
-                    TransformDetailActivity.startActivity(binding.root.context, binding.transLayoutTestItem, testItem)
+                    it.context.transformStartActivity<TransformDetailActivity, TestItem>(binding.transLayoutTestItem, testItem)
                     previousTime = now
-                    Log.e("+++++", "if true")
-                }else{
-                    Log.e("+++++", "if false")
                 }
             }
         }

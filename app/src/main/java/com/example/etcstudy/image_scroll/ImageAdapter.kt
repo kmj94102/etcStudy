@@ -1,21 +1,26 @@
 package com.example.etcstudy.image_scroll
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 import com.example.etcstudy.databinding.CellImageBinding
+import com.example.etcstudy.util.transformStartActivity
 
 class ImageAdapter : ListAdapter<ImageItem, ImageAdapter.ImageViewHolder>(diffUtil) {
     inner class ImageViewHolder(private val binding : CellImageBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(imageItem: ImageItem){
-            binding.imgScroll1.setBackgroundResource(imageItem.imageRes)
-            binding.imgScroll2.setBackgroundResource(imageItem.imageRes)
-            binding.imgScroll3.setBackgroundResource(imageItem.imageRes)
-            binding.imgScroll2.visibility = View.GONE
-            binding.imgScroll3.visibility = View.GONE
+            Glide.with(binding.imgScroll.context)
+                .applyDefaultRequestOptions(RequestOptions.centerInsideTransform())
+                .load(imageItem.backgroundImage)
+                .into(binding.imgScroll)
+
+            binding.root.setOnClickListener {
+                it.context.transformStartActivity<ImageDetailActivity, ImageItem>(binding.transLayoutImage, imageItem)
+            }
         }
     }
 
