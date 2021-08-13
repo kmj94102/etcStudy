@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.view.size
+import com.example.etcstudy.R
 import com.example.etcstudy.databinding.ActivityTransformBinding
+import com.example.etcstudy.transform.custom.ProgressItem
 import com.example.etcstudy.util.Constraint
 import com.example.etcstudy.util.startActivity
 import com.example.etcstudy.util.toast
@@ -13,6 +15,9 @@ import com.skydoves.transformationlayout.TransformationCompat
 class TransformActivity : AppCompatActivity() {
 
     private val binding : ActivityTransformBinding by lazy { ActivityTransformBinding.inflate(layoutInflater) }
+    private val progressItemList : ArrayList<ProgressItem> = arrayListOf()
+    private lateinit var mProgressItem : ProgressItem
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +26,8 @@ class TransformActivity : AppCompatActivity() {
         initViews()
 
         initRecyclerView()
+
+        initSeekBar()
 
     }
 
@@ -53,6 +60,22 @@ class TransformActivity : AppCompatActivity() {
         }
 
         return list
+    }
+
+
+    private fun initSeekBar(){
+        binding.seekBar.thumb.mutate().alpha = 0
+        mProgressItem = ProgressItem(progressItemPercentage = 100f, color = android.R.color.holo_red_dark)
+        progressItemList.add(mProgressItem)
+
+        mProgressItem = ProgressItem(progressItemPercentage = 80f, color = android.R.color.holo_blue_light)
+        progressItemList.add(mProgressItem)
+
+        mProgressItem = ProgressItem(progressItemPercentage = 40f, color = android.R.color.holo_green_dark)
+        progressItemList.add(mProgressItem)
+
+        binding.seekBar.initData(progressItemList)
+        binding.seekBar.invalidate()
     }
 
 

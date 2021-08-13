@@ -60,4 +60,29 @@
 
     </com.google.android.material.card.MaterialCardView>
 
+    <com.example.etcstudy.transform.custom.CustomProgressbar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@android:color/transparent"
+        android:thumb="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:trackCornerRadius="20dp"
+        app:trackThickness="20dp"
+        android:progress="50"
+        android:max="100"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
