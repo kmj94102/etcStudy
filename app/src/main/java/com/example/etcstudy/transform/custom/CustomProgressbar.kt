@@ -13,8 +13,9 @@ open class CustomProgressbar : androidx.appcompat.widget.AppCompatSeekBar {
     constructor(context: Context, attributeSet: AttributeSet) : super(context, attributeSet)
 
     var mProgressItemList : ArrayList<ProgressItem> = arrayListOf()
-
     fun initData(mProgressItemList : ArrayList<ProgressItem>){
+        progressDrawable = null
+        thumb = null
         this.mProgressItemList = mProgressItemList
     }
 

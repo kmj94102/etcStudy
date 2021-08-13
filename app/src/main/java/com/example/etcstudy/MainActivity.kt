@@ -3,6 +3,7 @@ package com.example.etcstudy
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.etcstudy.databinding.ActivityMainBinding
+import com.example.etcstudy.design_test.RentalBookActivity
 import com.example.etcstudy.image_scroll.ImageScrollActivity
 import com.example.etcstudy.transform.TransformActivity
 import com.example.etcstudy.util.startActivity
@@ -25,6 +26,13 @@ class MainActivity : AppCompatActivity() {
                 startActivity<TransformActivity>()
                 finish()
             }
+
+            btnDesign1.setOnClickListener {
+                startActivity<RentalBookActivity>()
+                finish()
+            }
+
+            btnDesign1.performClick()
         }
 
     }

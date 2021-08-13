@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">etcStudy</string>
+    <string name="rental_book">임대료관리</string>
 </resources>
