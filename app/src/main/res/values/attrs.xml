@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RentalStatusView">
+        <attr name="backgroundRes" format="reference"/>
+        <attr name="monthText" format="string"/>
+        <attr name="colorRes" format="reference"/>
+    </declare-styleable>
+</resources>

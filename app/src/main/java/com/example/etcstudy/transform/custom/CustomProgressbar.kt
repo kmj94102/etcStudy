@@ -41,7 +41,7 @@ open class CustomProgressbar : androidx.appcompat.widget.AppCompatSeekBar {
                 val progressRect = RectF()
                 progressRect.set(0f, (thumbOffset / 2).toFloat(), progressItemWidth, progressBarHeight - thumbOffset / 2)
 
-                canvas.drawRoundRect(progressRect, 20f, 20f, progressPaint)
+                canvas.drawRoundRect(progressRect, 25f, 25f, progressPaint)
             }
             super.onDraw(canvas)
         }

@@ -1,11 +1,29 @@
 package com.example.etcstudy.design_test
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.DisplayMetrics
+import android.view.MotionEvent
+import android.widget.RelativeLayout
+import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.ActivityRentalBookBinding
 import com.example.etcstudy.transform.custom.CustomProgressbar
 import com.example.etcstudy.transform.custom.ProgressItem
+import com.github.mikephil.charting.animation.Easing
+import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.components.Legend
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.formatter.PercentFormatter
+import com.github.mikephil.charting.listener.ChartTouchListener
+import com.github.mikephil.charting.listener.OnChartGestureListener
+import com.github.mikephil.charting.utils.ColorTemplate
+import com.github.mikephil.charting.utils.ColorTemplate.COLORFUL_COLORS
+import com.google.android.material.tabs.TabLayout
 
 class RentalBookActivity : AppCompatActivity() {
 
@@ -22,6 +40,27 @@ class RentalBookActivity : AppCompatActivity() {
 
     private fun initViews() = with(binding){
         initProgressRentalStatus(progressRentalStatus)
+
+        val adapter = RentalStatusAdapter()
+        rvRentalStatus.adapter = adapter
+
+        adapter.submitList(setAdapter())
+
+
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabReselected(tab: TabLayout.Tab?) {}
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val newAdapter = RentalStatusAdapter()
+                rvRentalStatus.adapter = newAdapter
+                newAdapter.submitList(setAdapter())
+            }
+
+        })
+
+        setChart(binding.chart)
+
     }
 
     private fun initProgressRentalStatus(progressRentalStatus: CustomProgressbar) {
@@ -39,6 +78,105 @@ class RentalBookActivity : AppCompatActivity() {
 
         progressRentalStatus.initData(progressItemList)
         progressRentalStatus.invalidate()
+    }
+
+    private fun setAdapter() : List<RentalStatusResult>{
+        val list = mutableListOf<RentalStatusResult>()
+        PaymentStatus.values().random()
+        list.add(
+            RentalStatusResult(
+                ho = "101호",
+                tenantName = "김철수",
+                startMonth = "6월",
+                startMonthStatus = Rental(PaymentStatus.values().random()),
+                middleMonth = "7월",
+                middleMonthStatus = Rental(PaymentStatus.values().random()),
+                endMonth = "8월",
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            )
+        )
+
+        list.add(
+            RentalStatusResult(
+                ho = "102호",
+                tenantName = "김철수",
+                startMonth = "6월",
+                startMonthStatus = Rental(PaymentStatus.values().random()),
+                middleMonth = "7월",
+                middleMonthStatus = Rental(PaymentStatus.values().random()),
+                endMonth = "8월",
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            )
+        )
+
+        list.add(
+            RentalStatusResult(
+                ho = "201호",
+                tenantName = "김철수",
+                startMonth = "6월",
+                startMonthStatus = Rental(PaymentStatus.values().random()),
+                middleMonth = "7월",
+                middleMonthStatus = Rental(PaymentStatus.values().random()),
+                endMonth = "8월",
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            )
+        )
+
+        list.add(
+            RentalStatusResult(
+                ho = "305호",
+                tenantName = "김철수",
+                startMonth = "6월",
+                startMonthStatus = Rental(PaymentStatus.values().random()),
+                middleMonth = "7월",
+                middleMonthStatus = Rental(PaymentStatus.values().random()),
+                endMonth = "8월",
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            )
+        )
+
+        return list
+    }
+
+    private fun setChart(chart: PieChart) {
+        chart.setUsePercentValues(true)
+
+        val entries = ArrayList<PieEntry>()
+        entries.add(PieEntry(7f, ""))
+        entries.add(PieEntry(2f, ""))
+        entries.add(PieEntry(3f, ""))
+
+        val colorsItems = arrayListOf(
+            ContextCompat.getColor(this, R.color.sky_blue),
+            ContextCompat.getColor(this, R.color.red),
+            ContextCompat.getColor(this, R.color.yellow)
+        )
+
+        val pieDataSet = PieDataSet(entries, "").apply {
+            colors = colorsItems
+            valueTextSize = 0f
+        }
+
+        val pieData = PieData(pieDataSet)
+        chart.apply {
+            data = pieData
+            // 차트 설명
+            description.isEnabled = false
+            // 원형 차트 범위 : 0f ~ 360f
+            maxAngle = 180f
+            // 차트 회전
+            rotationAngle = 180f
+            // 차트 범례 표시여부
+            legend.isEnabled = false
+            // 터치 가능 여부
+            setTouchEnabled(false)
+            isDrawHoleEnabled = true
+            setTransparentCircleAlpha(0)
+            setBackgroundResource(R.color.light_gray)
+            animateY(1400, Easing.EaseInOutQuad)
+            animate()
+        }
+
     }
 
 }
