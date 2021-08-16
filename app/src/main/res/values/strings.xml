@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">etcStudy</string>
     <string name="rental_book">임대료관리</string>
+    <string name="home">홈</string>
+    <string name="rental_management1">임대료관리1</string>
+    <string name="rental_management2">임대료관리2</string>
+    <string name="all_account">전체계좌</string>
+    <string name="standard">기준</string>
+    <string name="rent_status_last_3_months">최근 3개월의 임대료 현황</string>
+    <string name="payment_due">예정</string>
+    <string name="non_payment">미납</string>
 </resources>

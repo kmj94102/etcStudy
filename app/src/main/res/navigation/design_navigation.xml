@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/design_navigation"
+    app:startDestination="@id/menuHome">
+
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="com.example.etcstudy.design_test.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home"/>
+    <fragment
+        android:id="@+id/menuAllAccount"
+        android:name="com.example.etcstudy.design_test.all_account.AllAccountFragment"
+        android:label="AllAccountFragment"
+        tools:layout="@layout/fragment_all_account"/>
+    <fragment
+        android:id="@+id/menuRentalManagement1"
+        android:name="com.example.etcstudy.design_test.rental_management1.RentalManagementOneFragment"
+        android:label="RentalManagementOneFragment"
+        tools:layout="@layout/fragment_rental_management_one"/>
+    <fragment
+        android:id="@+id/menuRentalManagement2"
+        android:name="com.example.etcstudy.design_test.rental_management2.RentalManagementTwoFragment"
+        android:label="RentalManagementTwoFragment"
+        tools:layout="@layout/fragment_rental_management_two"/>
+</navigation>
