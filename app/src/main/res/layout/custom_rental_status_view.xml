@@ -17,6 +17,8 @@
         android:layout_height="wrap_content"
         android:paddingVertical="12dp"
         android:paddingHorizontal="23dp"
+        android:fontFamily="@font/nanum_square_b"
+        android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

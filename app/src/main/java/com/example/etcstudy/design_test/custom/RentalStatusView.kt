@@ -2,7 +2,6 @@ package com.example.etcstudy.design_test.custom
 
 import android.content.Context
 import android.content.res.TypedArray
-import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -35,12 +34,13 @@ open class RentalStatusView : ConstraintLayout{
     private fun setTypeArray(typeArray: TypedArray) {
         val monthText = typeArray.getString(R.styleable.RentalStatusView_monthText)
         val backgroundRes = typeArray.getResourceId(R.styleable.RentalStatusView_backgroundRes, R.drawable.bg_sky_blue_round_7)
-        val colorRes = typeArray.getResourceId(R.styleable.RentalStatusView_colorRes, R.color.sky_blue)
+        val textColorRes = typeArray.getResourceId(R.styleable.RentalStatusView_textColorRes, R.color.sky_blue)
+        val dotColorRes = typeArray.getResourceId(R.styleable.RentalStatusView_dotColorRes, R.color.sky_blue)
 
         binding.txtMonth.text = monthText
-        binding.txtMonth.setTextColor(ContextCompat.getColor(context, colorRes))
+        binding.txtMonth.setTextColor(ContextCompat.getColor(context, textColorRes))
         binding.layoutBackground.setBackgroundResource(backgroundRes)
-        binding.viewDot.backgroundTintList = ContextCompat.getColorStateList(context, colorRes)
+        binding.viewDot.backgroundTintList = ContextCompat.getColorStateList(context, dotColorRes)
 
         typeArray.recycle()
     }
@@ -49,12 +49,15 @@ open class RentalStatusView : ConstraintLayout{
         binding.txtMonth.text = month
     }
 
-    fun setColor(colorRes : Int){
+    fun setTextColor(colorRes : Int){
         binding.txtMonth.setTextColor(ContextCompat.getColor(context, colorRes))
-        binding.viewDot.backgroundTintList = ContextCompat.getColorStateList(context, colorRes)
     }
 
     fun setBackground(backgroundRes : Int){
         binding.layoutBackground.setBackgroundResource(backgroundRes)
+    }
+
+    fun setDotColor(colorRes: Int){
+        binding.viewDot.backgroundTintList = ContextCompat.getColorStateList(context, colorRes)
     }
 }

@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EtcStudy">
         <activity
+            android:name=".design_test.tree_structure.TreeActivity"
+            android:exported="true" />
+        <activity
             android:name=".design_test.DesignActivity"
             android:exported="true" />
         <activity

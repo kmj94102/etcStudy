@@ -86,7 +86,7 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "102호",
-                tenantName = "김철수",
+                tenantName = "이다니엘아",
                 startMonth = "6월",
                 startMonthStatus = Rental(PaymentStatus.values().random()),
                 middleMonth = "7월",
@@ -99,7 +99,7 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "201호",
-                tenantName = "김철수",
+                tenantName = "3층 원빌딩 회의실",
                 startMonth = "6월",
                 startMonthStatus = Rental(PaymentStatus.values().random()),
                 middleMonth = "7월",
@@ -112,7 +112,33 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "305호",
-                tenantName = "김철수",
+                tenantName = "1층 서른커피",
+                startMonth = "6월",
+                startMonthStatus = Rental(PaymentStatus.values().random()),
+                middleMonth = "7월",
+                middleMonthStatus = Rental(PaymentStatus.values().random()),
+                endMonth = "8월",
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            )
+        )
+
+        list.add(
+            RentalStatusResult(
+                ho = "306호",
+                tenantName = "일이삼사오육칠팔구십일이삼사오",
+                startMonth = "6월",
+                startMonthStatus = Rental(PaymentStatus.values().random()),
+                middleMonth = "7월",
+                middleMonthStatus = Rental(PaymentStatus.values().random()),
+                endMonth = "8월",
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            )
+        )
+
+        list.add(
+            RentalStatusResult(
+                ho = "306호",
+                tenantName = "일이삼사오육칠팔구십일이삼사오일이삼사오육칠팔구십일이삼사오일이삼사오육칠팔구십일이삼사오일이삼사오육칠팔구십일이삼사오",
                 startMonth = "6월",
                 startMonthStatus = Rental(PaymentStatus.values().random()),
                 middleMonth = "7월",

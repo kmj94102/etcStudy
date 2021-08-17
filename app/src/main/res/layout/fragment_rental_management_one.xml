@@ -45,6 +45,7 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:overScrollMode="never"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/layoutTitle"
@@ -130,7 +131,6 @@
                 app:layout_constraintTop_toBottomOf="@id/layoutCalendar"
                 app:layout_constraintEnd_toEndOf="parent"/>
 
-            <!-- todo 작은 화면 대비 할 필요성 있음 -->
             <View
                 android:id="@+id/viewNonPayment"
                 android:layout_width="8dp"
@@ -192,7 +192,7 @@
                 android:layout_marginStart="4dp"
                 android:text="@string/payment_due"
                 android:textSize="12sp"
-                android:textColor="@color/yellow"
+                android:textColor="@color/dark_yellow"
                 app:layout_constraintTop_toBottomOf="@id/txtRentalStatus"
                 app:layout_constraintStart_toEndOf="@id/viewPaymentDue"/>
 
@@ -202,7 +202,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:textSize="18sp"
-                android:textColor="@color/yellow"
+                android:textColor="@color/dark_yellow"
                 android:text="1,200,000원"
                 app:layout_constraintTop_toBottomOf="@id/labelPaymentDue"
                 app:layout_constraintStart_toStartOf="@id/viewPaymentDue"/>
@@ -300,11 +300,13 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
+                android:layout_marginBottom="11dp"
                 android:overScrollMode="never"
                 android:nestedScrollingEnabled="false"
                 android:orientation="vertical"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintTop_toBottomOf="@id/tabLayout"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:listitem="@layout/cell_rental_status"/>

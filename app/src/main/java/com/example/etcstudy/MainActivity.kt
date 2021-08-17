@@ -5,6 +5,7 @@ import android.os.Bundle
 import com.example.etcstudy.databinding.ActivityMainBinding
 import com.example.etcstudy.design_test.DesignActivity
 import com.example.etcstudy.design_test.RentalBookActivity
+import com.example.etcstudy.design_test.tree_structure.TreeActivity
 import com.example.etcstudy.image_scroll.ImageScrollActivity
 import com.example.etcstudy.transform.TransformActivity
 import com.example.etcstudy.util.startActivity
@@ -33,7 +34,12 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
 
-            btnDesign1.performClick()
+            btnTree.setOnClickListener {
+                startActivity<TreeActivity>()
+                finish()
+            }
+
+//            btnDesign1.performClick()
         }
 
     }

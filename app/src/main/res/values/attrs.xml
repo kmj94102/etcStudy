@@ -3,6 +3,7 @@
     <declare-styleable name="RentalStatusView">
         <attr name="backgroundRes" format="reference"/>
         <attr name="monthText" format="string"/>
-        <attr name="colorRes" format="reference"/>
+        <attr name="textColorRes" format="reference"/>
+        <attr name="dotColorRes" format="reference"/>
     </declare-styleable>
 </resources>

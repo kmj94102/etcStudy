@@ -67,7 +67,7 @@
                 android:layout_height="280dp"
                 android:layout_marginTop="9dp"
                 android:layout_marginHorizontal="20dp"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="10dp"
                 app:cardBackgroundColor="#f5f5f5"
                 app:cardElevation="0dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -132,77 +132,100 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"/>
 
-                    <View
-                        android:id="@+id/viewNonPayment"
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:background="@drawable/bg_red_fill_round_2"
-                        app:layout_constraintHorizontal_chainStyle="packed"
-                        app:layout_constraintTop_toTopOf="@id/labelNonPayment"
-                        app:layout_constraintBottom_toBottomOf="@id/labelNonPayment"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/labelNonPayment"/>
-
-                    <TextView
-                        android:id="@+id/labelNonPayment"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="@string/non_payment"
-                        android:textSize="12sp"
-                        android:textColor="@color/red"
-                        app:layout_constraintTop_toTopOf="@id/txtNonPayment"
-                        app:layout_constraintBottom_toBottomOf="@id/txtNonPayment"
-                        app:layout_constraintEnd_toStartOf="@id/txtNonPayment"
-                        app:layout_constraintStart_toEndOf="@id/viewNonPayment"/>
-
-                    <TextView
-                        android:id="@+id/txtNonPayment"
-                        android:layout_width="wrap_content"
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
-                        android:textSize="14sp"
-                        android:textColor="#212121"
-                        android:text="800,000원"
-                        app:layout_constraintBottom_toTopOf="@id/txtPaymentDue"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/labelNonPayment"/>
-
-                    <View
-                        android:id="@+id/viewPaymentDue"
-                        android:layout_width="8dp"
-                        android:layout_height="8dp"
-                        android:background="@drawable/bg_yellow_fill_round_2"
-                        app:layout_constraintHorizontal_chainStyle="packed"
-                        app:layout_constraintTop_toTopOf="@id/txtPaymentDue"
-                        app:layout_constraintBottom_toBottomOf="@id/txtPaymentDue"
+                        app:layout_constraintBottom_toTopOf="@id/layoutPaymentDue"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@id/labelPaymentDue"/>
+                        app:layout_constraintEnd_toEndOf="parent">
 
-                    <TextView
-                        android:id="@+id/labelPaymentDue"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:text="@string/payment_due"
-                        android:textSize="12sp"
-                        android:textColor="@color/yellow"
-                        app:layout_constraintTop_toTopOf="@id/txtPaymentDue"
-                        app:layout_constraintBottom_toBottomOf="@id/txtPaymentDue"
-                        app:layout_constraintStart_toEndOf="@id/viewPaymentDue"
-                        app:layout_constraintEnd_toStartOf="@id/txtPaymentDue"/>
+                        <View
+                            android:id="@+id/viewNonPayment"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_red_fill_round_2"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintTop_toTopOf="@id/labelNonPayment"
+                            app:layout_constraintBottom_toBottomOf="@id/labelNonPayment"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/labelNonPayment"/>
 
-                    <TextView
-                        android:id="@+id/txtPaymentDue"
-                        android:layout_width="wrap_content"
+                        <TextView
+                            android:id="@+id/labelNonPayment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/non_payment"
+                            android:textSize="12sp"
+                            android:textColor="@color/red"
+                            app:layout_constraintTop_toTopOf="@id/txtNonPayment"
+                            app:layout_constraintBottom_toBottomOf="@id/txtNonPayment"
+                            app:layout_constraintEnd_toStartOf="@id/txtNonPayment"
+                            app:layout_constraintStart_toEndOf="@id/viewNonPayment"/>
+
+                        <TextView
+                            android:id="@+id/txtNonPayment"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:textSize="14sp"
+                            android:textColor="#212121"
+                            android:text="800,000원"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/labelNonPayment"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutPaymentDue"
+                        android:layout_width="150dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="14dp"
-                        android:textSize="14sp"
-                        android:textColor="#212121"
-                        android:text="12,800,000원"
+                        android:orientation="horizontal"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/labelPaymentDue"
-                        app:layout_constraintEnd_toEndOf="parent"/>
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <View
+                            android:id="@+id/viewPaymentDue"
+                            android:layout_width="8dp"
+                            android:layout_height="8dp"
+                            android:background="@drawable/bg_yellow_fill_round_2"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintTop_toTopOf="@id/txtPaymentDue"
+                            app:layout_constraintBottom_toBottomOf="@id/txtPaymentDue"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/labelPaymentDue"/>
+
+                        <TextView
+                            android:id="@+id/labelPaymentDue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="@string/payment_due"
+                            android:textSize="12sp"
+                            android:textColor="@color/dark_yellow"
+                            app:layout_constraintTop_toTopOf="@id/txtPaymentDue"
+                            app:layout_constraintBottom_toBottomOf="@id/txtPaymentDue"
+                            app:layout_constraintStart_toEndOf="@id/viewPaymentDue"
+                            app:layout_constraintEnd_toStartOf="@id/txtPaymentDue"/>
+
+                        <TextView
+                            android:id="@+id/txtPaymentDue"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="end"
+                            android:textSize="14sp"
+                            android:textColor="#212121"
+                            android:text="1,200,000,000원"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/labelPaymentDue"
+                            app:layout_constraintEnd_toEndOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

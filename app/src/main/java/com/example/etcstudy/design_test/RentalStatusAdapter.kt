@@ -26,15 +26,18 @@ class RentalStatusAdapter : ListAdapter<RentalStatusResult, RentalStatusAdapter.
         rentalStatusView.setMonth(month)
         when(status.status){
             FULL_PAYMENT -> {
-                rentalStatusView.setColor(R.color.sky_blue)
+                rentalStatusView.setTextColor(R.color.sky_blue)
+                rentalStatusView.setDotColor(R.color.sky_blue)
                 rentalStatusView.setBackground(R.drawable.bg_sky_blue_round_7)
             }
             NON_PAYMENT -> {
-                rentalStatusView.setColor(R.color.red)
+                rentalStatusView.setTextColor(R.color.red)
+                rentalStatusView.setDotColor(R.color.red)
                 rentalStatusView.setBackground(R.drawable.bg_red_round_7)
             }
             PAYMENT_DUE -> {
-                rentalStatusView.setColor(R.color.yellow)
+                rentalStatusView.setTextColor(R.color.dark_yellow)
+                rentalStatusView.setDotColor(R.color.yellow)
                 rentalStatusView.setBackground(R.drawable.bg_yellow_round_7)
             }
         }
