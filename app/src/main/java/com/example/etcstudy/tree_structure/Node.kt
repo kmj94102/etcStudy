@@ -1,4 +1,4 @@
-package com.example.etcstudy.design_test.tree_structure
+package com.example.etcstudy.tree_structure
 
 // https://leveloper.tistory.com/203?category=762053
 class Node<T>(val content : T) {

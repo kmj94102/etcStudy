@@ -1,4 +1,4 @@
-package com.example.etcstudy.design_test.tree_structure
+package com.example.etcstudy.tree_structure
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
