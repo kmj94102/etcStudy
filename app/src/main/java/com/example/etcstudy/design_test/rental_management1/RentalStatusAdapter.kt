@@ -1,4 +1,4 @@
-package com.example.etcstudy.design_test
+package com.example.etcstudy.design_test.rental_management1
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,12 +8,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.CellRentalStatusBinding
 import com.example.etcstudy.design_test.PaymentStatus.*
+import com.example.etcstudy.design_test.Rental
+import com.example.etcstudy.design_test.RentalStatusResult
 import com.example.etcstudy.design_test.custom.RentalStatusView
+import com.example.etcstudy.design_test.dialog.PaymentDialog
+import com.example.etcstudy.util.setLayoutMarginBottom
+import com.example.etcstudy.util.setLayoutMarginTop
 
 class RentalStatusAdapter : ListAdapter<RentalStatusResult, RentalStatusAdapter.RentalStatusViewHolder>(diffUtil) {
 
     inner class RentalStatusViewHolder(val binding : CellRentalStatusBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(result: RentalStatusResult){
+            binding.layoutRentalStatus.setLayoutMarginTop(11f)
+            binding.layoutRentalStatus.setLayoutMarginBottom(11f)
             binding.txtHo.text = result.ho
             binding.txtTenant.text = result.tenantName
             setRentalStatusView(binding.txtStartMonth, result.startMonth, result.startMonthStatus)
@@ -40,6 +47,14 @@ class RentalStatusAdapter : ListAdapter<RentalStatusResult, RentalStatusAdapter.
                 rentalStatusView.setDotColor(R.color.yellow)
                 rentalStatusView.setBackground(R.drawable.bg_yellow_round_7)
             }
+        }
+
+        rentalStatusView.setOnClickListener {
+            PaymentDialog(context = it.context, year = 2021, month = month.dropLast(1).toInt(), "원빌딩 101호 서른커피"){ rentAmt, manageAmt ->
+                rentalStatusView.setTextColor(R.color.sky_blue)
+                rentalStatusView.setDotColor(R.color.sky_blue)
+                rentalStatusView.setBackground(R.drawable.bg_sky_blue_round_7)
+            }.show()
         }
     }
 

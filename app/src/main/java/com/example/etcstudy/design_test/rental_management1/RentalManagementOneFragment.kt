@@ -9,8 +9,8 @@ import com.example.etcstudy.R
 import com.example.etcstudy.databinding.FragmentRentalManagementOneBinding
 import com.example.etcstudy.design_test.PaymentStatus
 import com.example.etcstudy.design_test.Rental
-import com.example.etcstudy.design_test.RentalStatusAdapter
 import com.example.etcstudy.design_test.RentalStatusResult
+import com.example.etcstudy.design_test.dialog.SelectLastMonthThreeMonthDialog
 import com.example.etcstudy.transform.custom.CustomProgressbar
 import com.example.etcstudy.transform.custom.ProgressItem
 import com.google.android.material.tabs.TabLayout
@@ -36,6 +36,11 @@ class RentalManagementOneFragment : Fragment() {
 
         adapter.submitList(setAdapter())
 
+        layoutCalendar.setOnClickListener {
+            SelectLastMonthThreeMonthDialog(requireContext(), 8){ startMonth, lastMonth ->
+                binding.txtSelectMonth.text = "2021.${startMonth}.1 ~ 2021.${lastMonth}.31"
+            }.show()
+        }
 
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
             override fun onTabUnselected(tab: TabLayout.Tab?) {}

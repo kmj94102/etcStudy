@@ -1,28 +1,18 @@
 package com.example.etcstudy.design_test
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.view.MotionEvent
-import android.widget.RelativeLayout
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.ActivityRentalBookBinding
+import com.example.etcstudy.design_test.rental_management1.RentalStatusAdapter
 import com.example.etcstudy.transform.custom.CustomProgressbar
 import com.example.etcstudy.transform.custom.ProgressItem
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
-import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
-import com.github.mikephil.charting.formatter.PercentFormatter
-import com.github.mikephil.charting.listener.ChartTouchListener
-import com.github.mikephil.charting.listener.OnChartGestureListener
-import com.github.mikephil.charting.utils.ColorTemplate
-import com.github.mikephil.charting.utils.ColorTemplate.COLORFUL_COLORS
 import com.google.android.material.tabs.TabLayout
 
 class RentalBookActivity : AppCompatActivity() {

@@ -1,13 +1,17 @@
 package com.example.etcstudy.design_test.rental_management2
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.FragmentRentalManagementTwoBinding
+import com.example.etcstudy.design_test.*
+import com.example.etcstudy.design_test.dialog.SelectLastMonthThreeMonthDialog
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
@@ -24,6 +28,10 @@ class RentalManagementTwoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setChart(binding.chart)
+
+        setAdapter(binding.rvRentalStatus)
+
+        setDialog()
 
     }
 
@@ -66,6 +74,203 @@ class RentalManagementTwoFragment : Fragment() {
             animate()
         }
 
+    }
+
+    private fun setAdapter(recyclerView: RecyclerView){
+        val adapter = RentalStatusAdapter()
+
+        recyclerView.adapter = adapter
+
+        adapter.submitList(getList())
+    }
+
+    private fun getList() : List<RentalStatusType> {
+        val list = mutableListOf<RentalStatusType>()
+
+        list.add(
+            RentalStatusTitle().apply {
+                buildingName = "가나다빌딩"
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "101호"
+                tenantName = "김철수"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "102호"
+                tenantName = "이다니엘아"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "103호"
+                tenantName = "3층 원빌딩 회읙실"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "104호"
+                tenantName = "일이삼사오육칠팔구십"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusTitle().apply {
+                buildingName = "원빌딩"
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "101호"
+                tenantName = "원빌딩 101호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "102호"
+                tenantName = "원빌딩 102호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusTitle().apply {
+                buildingName = "쓰리빌딩"
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "101호"
+                tenantName = "쓰리빌딩 101호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "102호"
+                tenantName = "쓰리빌딩 102호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusTitle().apply {
+                buildingName = "마이빌딩"
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "201호"
+                tenantName = "마이빌딩 201호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "202호"
+                tenantName = "마이빌딩 202호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+        list.add(
+            RentalStatusTitle().apply {
+                buildingName = "마이빌딩"
+            }
+        )
+
+        list.add(
+            RentalStatusDetail().apply {
+                ho = "302호"
+                tenantName = "마이빌딩 302호"
+                startMonth = "6월"
+                startMonthStatus = Rental(PaymentStatus.values().random())
+                middleMonth = "7월"
+                middleMonthStatus = Rental(PaymentStatus.values().random())
+                endMonth = "8월"
+                endMonthStatus = Rental(PaymentStatus.values().random())
+            }
+        )
+
+
+        return list
+    }
+
+
+    private fun setDialog(){
+        binding.txtSelectMonth.setOnClickListener {
+            SelectLastMonthThreeMonthDialog(requireContext(), 8){ _, lastMonth ->
+                binding.txtSelectMonth.text = "${lastMonth}월"
+            }.show()
+        }
     }
 
 }

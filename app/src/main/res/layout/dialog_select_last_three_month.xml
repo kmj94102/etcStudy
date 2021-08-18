@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="23dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nanum_square_b"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="6월 ~ 8월"/>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="25dp"
+        android:gravity="center"
+        android:text="@string/description_select_last_month"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtMonth1"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="@string/january"
+        android:tag="1"
+        app:layout_constraintEnd_toStartOf="@id/txtMonth2"
+        app:layout_constraintStart_toStartOf="@id/txtDescription"
+        app:layout_constraintTop_toBottomOf="@id/txtDescription" />
+
+    <TextView
+        android:id="@+id/txtMonth2"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="@string/february"
+        android:tag="2"
+        app:layout_constraintEnd_toStartOf="@id/txtMonth3"
+        app:layout_constraintStart_toEndOf="@id/txtMonth1"
+        app:layout_constraintTop_toTopOf="@id/txtMonth1" />
+
+    <TextView
+        android:id="@+id/txtMonth3"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="@string/march"
+        android:tag="3"
+        app:layout_constraintEnd_toStartOf="@id/txtMonth4"
+        app:layout_constraintStart_toEndOf="@id/txtMonth2"
+        app:layout_constraintTop_toTopOf="@id/txtMonth1" />
+
+    <TextView
+        android:id="@+id/txtMonth4"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:text="@string/april"
+        android:tag="4"
+        app:layout_constraintEnd_toEndOf="@id/txtDescription"
+        app:layout_constraintStart_toEndOf="@id/txtMonth3"
+        app:layout_constraintTop_toTopOf="@id/txtMonth1" />
+
+    <TextView
+        android:id="@+id/txtMonth5"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/may"
+        android:tag="5"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth1"
+        app:layout_constraintStart_toStartOf="@id/txtMonth1"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth1" />
+
+    <TextView
+        android:id="@+id/txtMonth6"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/june"
+        android:tag="6"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth2"
+        app:layout_constraintStart_toStartOf="@id/txtMonth2"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth2" />
+
+    <TextView
+        android:id="@+id/txtMonth7"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/july"
+        android:tag="7"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth3"
+        app:layout_constraintStart_toStartOf="@id/txtMonth3"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth3" />
+
+    <TextView
+        android:id="@+id/txtMonth8"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/august"
+        android:tag="8"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth4"
+        app:layout_constraintStart_toStartOf="@id/txtMonth4"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth4" />
+
+    <TextView
+        android:id="@+id/txtMonth9"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/september"
+        android:tag="9"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth5"
+        app:layout_constraintStart_toStartOf="@id/txtMonth5"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth5" />
+
+    <TextView
+        android:id="@+id/txtMonth10"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/october"
+        android:tag="10"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth6"
+        app:layout_constraintStart_toStartOf="@id/txtMonth6"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth6" />
+
+    <TextView
+        android:id="@+id/txtMonth11"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/november"
+        android:tag="11"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth7"
+        app:layout_constraintStart_toStartOf="@id/txtMonth7"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth7" />
+
+    <TextView
+        android:id="@+id/txtMonth12"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="@string/december"
+        android:tag="12"
+        app:layout_constraintEnd_toEndOf="@id/txtMonth8"
+        app:layout_constraintStart_toStartOf="@id/txtMonth8"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth8"
+        tools:background="@drawable/bg_red_circle"
+        tools:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_gray"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth12"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtMonth12"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
