@@ -1,79 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginStart="31dp"
-    android:layout_marginEnd="31dp"
-    android:layout_marginTop="11dp"
-    android:layout_marginBottom="11dp">
+<layout>
 
-    <TextView
-        android:id="@+id/txtHo"
-        android:layout_width="wrap_content"
+    <data>
+        <variable
+            name="isDefaultTopMargin"
+            type="Boolean" />
+        <variable
+            name="isDefaultBottomMargin"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/layoutRentalStatus"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="301호"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/txtTenant"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:layout_marginStart="31dp"
+        android:layout_marginEnd="31dp">
 
-    <TextView
-        android:id="@+id/txtTenant"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="박철수"
-        android:maxLines="1"
-        android:ellipsize="end"
-        app:layout_constraintTop_toBottomOf="@id/txtHo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/txtStartMonth"/>
+        <TextView
+            android:id="@+id/txtHo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="301호"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/txtTenant"
+            app:layout_constraintStart_toStartOf="parent"/>
 
-    <com.example.etcstudy.design_test.custom.RentalStatusView
-        android:id="@+id/txtStartMonth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        app:backgroundRes="@drawable/bg_sky_blue_round_7"
-        app:monthText="6월"
-        app:textColorRes="@color/sky_blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/txtMiddleMonth"
-        tools:layout_width="68dp"
-        tools:layout_height="40dp"
-        tools:background="@drawable/bg_sky_blue_round_7"/>
+        <TextView
+            android:id="@+id/txtTenant"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="박철수"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintTop_toBottomOf="@id/txtHo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtStartMonth"/>
 
-    <com.example.etcstudy.design_test.custom.RentalStatusView
-        android:id="@+id/txtMiddleMonth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        app:backgroundRes="@drawable/bg_red_round_7"
-        app:monthText="7월"
-        app:textColorRes="@color/red"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/txtEndMonth"
-        tools:layout_width="68dp"
-        tools:layout_height="40dp"
-        tools:background="@drawable/bg_red_round_7"/>
+        <com.example.etcstudy.design_test.custom.RentalStatusView
+            android:id="@+id/txtStartMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:backgroundRes="@drawable/bg_sky_blue_round_7"
+            app:monthText="6월"
+            app:textColorRes="@color/sky_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtMiddleMonth"
+            tools:layout_width="68dp"
+            tools:layout_height="40dp"
+            tools:background="@drawable/bg_sky_blue_round_7"/>
 
-    <com.example.etcstudy.design_test.custom.RentalStatusView
-        android:id="@+id/txtEndMonth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:backgroundRes="@drawable/bg_yellow_round_7"
-        app:monthText="8월"
-        app:textColorRes="@color/yellow"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_width="68dp"
-        tools:layout_height="40dp"
-        tools:background="@drawable/bg_yellow_round_7"/>
+        <com.example.etcstudy.design_test.custom.RentalStatusView
+            android:id="@+id/txtMiddleMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:backgroundRes="@drawable/bg_red_round_7"
+            app:monthText="7월"
+            app:textColorRes="@color/red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/txtEndMonth"
+            tools:layout_width="68dp"
+            tools:layout_height="40dp"
+            tools:background="@drawable/bg_red_round_7"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.example.etcstudy.design_test.custom.RentalStatusView
+            android:id="@+id/txtEndMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundRes="@drawable/bg_yellow_round_7"
+            app:monthText="8월"
+            app:textColorRes="@color/yellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout_width="68dp"
+            tools:layout_height="40dp"
+            tools:background="@drawable/bg_yellow_round_7"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

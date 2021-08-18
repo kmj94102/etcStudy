@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/nanum_square_b"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2021년 6월 수납"/>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        tools:text="원빌딩 101호 서른커피"/>
+
+    <!-- 임대료 -->
+    <TextView
+        android:id="@+id/labelRentAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/rent_amt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtDescription"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtRentAmtEstimated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/light_gray"
+        app:layout_constraintTop_toTopOf="@id/labelRentAmt"
+        app:layout_constraintBottom_toBottomOf="@id/labelRentAmt"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="100,000,000,000"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutRentAmt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/labelRentAmt"
+        app:layout_constraintTop_toBottomOf="@id/labelRentAmt">
+
+        <EditText
+            android:id="@+id/editRentAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_amount"
+            android:inputType="number"
+            android:maxLength="15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/viewRentAmtClear"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="100,000,000,000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#d5d5d5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/viewRentAmtClear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ic_clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!-- 관리비 -->
+    <TextView
+        android:id="@+id/labelManageAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/manage_amt"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/layoutRentAmt"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtManageAmtEstimated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/light_gray"
+        app:layout_constraintTop_toTopOf="@id/labelManageAmt"
+        app:layout_constraintBottom_toBottomOf="@id/labelManageAmt"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="100,000,000,000"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutManageAmt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/labelManageAmt"
+        app:layout_constraintTop_toBottomOf="@id/labelManageAmt">
+
+        <EditText
+            android:id="@+id/editManageAmt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="@string/input_amount"
+            android:inputType="number"
+            android:maxLength="15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/viewManageAmtClear"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="100,000,000,000" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#d5d5d5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/viewManageAmtClear"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/ic_clear"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/light_gray"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutManageAmt"
+        app:layout_constraintWidth_percent="0.5" />
+
+
+    <TextView
+        android:id="@+id/btnOk"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/red"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="@color/white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutManageAmt"
+        app:layout_constraintWidth_percent="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
