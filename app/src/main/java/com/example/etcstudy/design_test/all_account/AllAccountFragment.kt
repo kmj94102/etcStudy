@@ -11,6 +11,7 @@ import com.example.etcstudy.databinding.FragmentAllAccountBinding
 import com.example.etcstudy.design_test.PaymentStatus
 import com.example.etcstudy.design_test.Rental
 import com.example.etcstudy.design_test.RentalStatusResult
+import com.example.etcstudy.design_test.tenant_detail.TenantDetail
 
 class AllAccountFragment : Fragment() {
 
@@ -21,64 +22,57 @@ class AllAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter = AnimationAdapter()
-        binding.viewPager.adapter = adapter
-        adapter.submitList(setAdapter())
+//        val adapter = AnimationAdapter()
+//        binding.viewPager.adapter = adapter
+//        adapter.submitList(setAdapter())
 
     }
 
-    private fun setAdapter() : List<RentalStatusResult>{
-        val list = mutableListOf<RentalStatusResult>()
-        PaymentStatus.values().random()
+    private fun setAdapter() : List<TenantDetail>{
+        val list = mutableListOf<TenantDetail>()
+
         list.add(
-            RentalStatusResult(
-                ho = "101호",
-                tenantName = "김철수",
-                startMonth = "6월",
-                startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
-                middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
-                endMonthStatus = Rental(PaymentStatus.values().random())
+            TenantDetail(
+                tenantName = "홍길동",
+                buildingName = "원랩빌딩(1/3)",
+                area = "108㎡",
+                contractPeriod = "2020.01.02 ~2023.01.02 (D-35)",
+                yield = "5.2%",
+                deposit = "보증금 2500만원",
+                monthly = "4,852,000",
+                nonPayment = "- 1,852,000",
+                nonPayMonths = "7, 8",
+                isDepositCompleted = false
             )
         )
 
         list.add(
-            RentalStatusResult(
-                ho = "102호",
-                tenantName = "김철수",
-                startMonth = "6월",
-                startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
-                middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
-                endMonthStatus = Rental(PaymentStatus.values().random())
+            TenantDetail(
+                tenantName = "김민재",
+                buildingName = "원랩빌딩(2/3)",
+                area = "200㎡",
+                contractPeriod = "2020.01.02 ~2024.01.02 (D-350)",
+                yield = "8.2%",
+                deposit = "보증금 3500만원",
+                monthly = "1,000,000",
+                nonPayment = "0",
+                nonPayMonths = "7",
+                isDepositCompleted = true
             )
         )
 
         list.add(
-            RentalStatusResult(
-                ho = "201호",
-                tenantName = "김철수",
-                startMonth = "6월",
-                startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
-                middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
-                endMonthStatus = Rental(PaymentStatus.values().random())
-            )
-        )
-
-        list.add(
-            RentalStatusResult(
-                ho = "305호",
-                tenantName = "김철수",
-                startMonth = "6월",
-                startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
-                middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
-                endMonthStatus = Rental(PaymentStatus.values().random())
+            TenantDetail(
+                tenantName = "회의실",
+                buildingName = "원랩빌딩(3/3)",
+                area = "108㎡",
+                contractPeriod = "2020.01.02 ~2023.01.02 (D-35)",
+                yield = "5.2%",
+                deposit = "보증금 2500만원",
+                monthly = "4,852,000",
+                nonPayment = "- 1,852,000",
+                nonPayMonths = "7",
+                isDepositCompleted = false
             )
         )
 

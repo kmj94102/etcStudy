@@ -6,4 +6,10 @@
         <attr name="textColorRes" format="reference"/>
         <attr name="dotColorRes" format="reference"/>
     </declare-styleable>
+    <declare-styleable name="SelectMonthView">
+        <attr name="selectMonthBackgroundRes" format="reference"/>
+        <attr name="selectMonthMonthText" format="string"/>
+        <attr name="selectMonthTextColorRes" format="reference"/>
+        <attr name="selectMonthDotColorRes" format="reference"/>
+    </declare-styleable>
 </resources>

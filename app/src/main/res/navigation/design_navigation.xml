@@ -12,11 +12,6 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
     <fragment
-        android:id="@+id/menuAllAccount"
-        android:name="com.example.etcstudy.design_test.all_account.AllAccountFragment"
-        android:label="AllAccountFragment"
-        tools:layout="@layout/fragment_all_account"/>
-    <fragment
         android:id="@+id/menuRentalManagement1"
         android:name="com.example.etcstudy.design_test.rental_management1.RentalManagementOneFragment"
         android:label="RentalManagementOneFragment"
@@ -26,4 +21,18 @@
         android:name="com.example.etcstudy.design_test.rental_management2.RentalManagementTwoFragment"
         android:label="RentalManagementTwoFragment"
         tools:layout="@layout/fragment_rental_management_two"/>
+    <fragment
+        android:id="@+id/menuAllAccount"
+        android:name="com.example.etcstudy.design_test.all_account.AllAccountFragment"
+        android:label="AllAccountFragment"
+        tools:layout="@layout/fragment_all_account">
+        <action
+            android:id="@+id/action_menuAllAccount_to_allAccountDetailFragment"
+            app:destination="@id/allAccountDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allAccountDetailFragment"
+        android:name="com.example.etcstudy.design_test.all_account.AllAccountDetailFragment"
+        android:label="AllAccountDetailFragment"
+        tools:layout="@layout/cell_transition_select_item"/>
 </navigation>

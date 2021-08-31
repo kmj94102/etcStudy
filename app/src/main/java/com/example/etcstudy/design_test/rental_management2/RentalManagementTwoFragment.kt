@@ -86,6 +86,8 @@ class RentalManagementTwoFragment : Fragment() {
 
     private fun getList() : List<RentalStatusType> {
         val list = mutableListOf<RentalStatusType>()
+        val tenantNameList = listOf("김철수", "이다니엘아", "3층 원빌딩 회의실", "1층 서른커피", "일이삼사오육칠팔구십일이삼사오", "김민재", "5층 지원과", "원랩 회의실", "임차인", "꼬륵 도시락", "하하",
+                                    "테스트", "임차인", "안드로이드", "스튜디오", "제플린", "삼성", "LG", "APPLE", "기타", "사무실", "빌딩", "다이소")
 
         list.add(
             RentalStatusTitle().apply {
@@ -96,7 +98,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "101호"
-                tenantName = "김철수"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -109,7 +111,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "102호"
-                tenantName = "이다니엘아"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -122,7 +124,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "103호"
-                tenantName = "3층 원빌딩 회읙실"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -135,7 +137,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "104호"
-                tenantName = "일이삼사오육칠팔구십"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -154,7 +156,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "101호"
-                tenantName = "원빌딩 101호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -167,7 +169,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "102호"
-                tenantName = "원빌딩 102호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -186,7 +188,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "101호"
-                tenantName = "쓰리빌딩 101호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -199,7 +201,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "102호"
-                tenantName = "쓰리빌딩 102호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -218,7 +220,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "201호"
-                tenantName = "마이빌딩 201호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -231,7 +233,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "202호"
-                tenantName = "마이빌딩 202호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"
@@ -250,7 +252,7 @@ class RentalManagementTwoFragment : Fragment() {
         list.add(
             RentalStatusDetail().apply {
                 ho = "302호"
-                tenantName = "마이빌딩 302호"
+                tenantName = tenantNameList.random()
                 startMonth = "6월"
                 startMonthStatus = Rental(PaymentStatus.values().random())
                 middleMonth = "7월"

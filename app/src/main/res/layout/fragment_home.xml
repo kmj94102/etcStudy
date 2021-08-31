@@ -36,7 +36,7 @@
                 android:id="@+id/view"
                 android:layout_width="50dp"
                 android:layout_height="100dp"
-                android:background="@drawable/bg_red_fill_20"
+                android:background="@drawable/bg_red_fill_16"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"/>
 

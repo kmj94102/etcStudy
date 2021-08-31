@@ -44,12 +44,13 @@
 
         <com.example.etcstudy.design_test.custom.RentalStatusView
             android:id="@+id/txtStartMonth"
-            android:layout_width="wrap_content"
+            android:layout_width="68dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             app:backgroundRes="@drawable/bg_sky_blue_round_7"
             app:monthText="6월"
             app:textColorRes="@color/sky_blue"
+            app:dotColorRes="@color/sky_blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/txtMiddleMonth"
@@ -59,12 +60,13 @@
 
         <com.example.etcstudy.design_test.custom.RentalStatusView
             android:id="@+id/txtMiddleMonth"
-            android:layout_width="wrap_content"
+            android:layout_width="68dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             app:backgroundRes="@drawable/bg_red_round_7"
             app:monthText="7월"
             app:textColorRes="@color/red"
+            app:dotColorRes="@color/red"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toStartOf="@id/txtEndMonth"
@@ -74,11 +76,12 @@
 
         <com.example.etcstudy.design_test.custom.RentalStatusView
             android:id="@+id/txtEndMonth"
-            android:layout_width="wrap_content"
+            android:layout_width="68dp"
             android:layout_height="wrap_content"
             app:backgroundRes="@drawable/bg_yellow_round_7"
             app:monthText="8월"
             app:textColorRes="@color/yellow"
+            app:dotColorRes="@color/yellow"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

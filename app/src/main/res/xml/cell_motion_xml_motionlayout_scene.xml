@@ -5,68 +5,119 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="1000">
-        <OnClick
-            motion:clickAction="toggle"
-            motion:targetId="@id/viewMore" />
-    </Transition>
+        motion:duration="300"></Transition>
 
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/viewMore"
-            android:layout_width="50dp"
-            android:layout_height="100dp"
+            android:layout_width="41dp"
+            android:layout_height="67dp"
             android:layout_marginStart="0dp"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
-        <!--        <Constraint-->
-        <!--            android:id="@+id/imgClose"-->
-        <!--            android:layout_width="30dp"-->
-        <!--            android:layout_height="30dp"-->
-        <!--            android:layout_marginTop="35dp"-->
-        <!--            android:layout_marginEnd="10dp"-->
-        <!--            android:visibility="gone"-->
-        <!--            motion:layout_constraintEnd_toEndOf="parent"-->
-        <!--            motion:layout_constraintTop_toTopOf="parent" />-->
+        <Constraint
+            android:id="@+id/imgClose"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
             android:id="@+id/imgMore"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="41dp"
+            android:layout_height="67dp"
+            android:alpha="1"
             android:visibility="visible"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
+
         <Constraint
-            android:id="@+id/btn1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:visibility="gone"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/groupMore"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/btnModify"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/btn2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:visibility="gone"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toEndOf="@id/btn1"
+            android:id="@+id/viewModify"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/btn3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:visibility="gone"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toEndOf="@id/btn2"
+            android:id="@+id/txtModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/btnMemo"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/viewMemo"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/txtMemo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/btnGallery"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/viewGallery"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+        <Constraint
+            android:id="@+id/txtGallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
     </ConstraintSet>
+
 
     <ConstraintSet android:id="@+id/end">
         <Constraint
@@ -80,49 +131,173 @@
 
         <Constraint
             android:id="@+id/imgClose"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="10dp"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:alpha="1"
             android:visibility="visible"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
 
         <Constraint
             android:id="@+id/imgMore"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="10dp"
-            android:visibility="gone"
+            android:layout_width="41dp"
+            android:layout_height="67dp"
+            android:alpha="0"
+            android:visibility="invisible"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
+
         <Constraint
-            android:id="@+id/btn1"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:visibility="visible"
-            motion:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/viewYield"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="20dp"
+            android:alpha="0"
+            android:visibility="invisible"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" />
         <Constraint
-            android:id="@+id/btn2"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:visibility="visible"
-            motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toEndOf="@id/btn1"
-            motion:layout_constraintTop_toTopOf="parent" />
+            android:id="@+id/labelYield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/viewYield"
+            motion:layout_constraintStart_toEndOf="@id/viewYield"
+            motion:layout_constraintTop_toTopOf="@id/viewYield" />
         <Constraint
-            android:id="@+id/btn3"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:layout_marginStart="20dp"
-            android:visibility="visible"
+            android:id="@+id/txtYield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBaseline_toBaselineOf="@id/labelYield"
+            motion:layout_constraintStart_toEndOf="@id/labelYield" />
+        <Constraint
+            android:id="@+id/viewToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintStart_toStartOf="@id/viewYield"
+            motion:layout_constraintTop_toBottomOf="@id/viewYield" />
+        <Constraint
+            android:id="@+id/txtTenantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintStart_toStartOf="@id/viewYield"
+            motion:layout_constraintTop_toBottomOf="@id/viewToday" />
+        <Constraint
+            android:id="@+id/txtArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBaseline_toBaselineOf="@id/txtTenantName"
+            motion:layout_constraintStart_toEndOf="@id/txtTenantName" />
+        <Constraint
+            android:id="@+id/txtContractPeriod"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintStart_toStartOf="@id/viewYield"
+            motion:layout_constraintTop_toBottomOf="@id/txtTenantName" />
+        <Constraint
+            android:id="@+id/txtDeposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="22dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/txtContractPeriod" />
+        <Constraint
+            android:id="@+id/txtMonthWon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBaseline_toBaselineOf="@id/txtMonthly"
+            motion:layout_constraintEnd_toEndOf="@id/txtDeposit" />
+        <Constraint
+            android:id="@+id/txtMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="11dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toStartOf="@id/txtMonthWon"
+            motion:layout_constraintTop_toBottomOf="@id/txtDeposit" />
+        <Constraint
+            android:id="@+id/txtMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBaseline_toBaselineOf="@id/txtMonthly"
+            motion:layout_constraintStart_toStartOf="@id/viewYield" />
+        <Constraint
+            android:id="@+id/txtNonPayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="11dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintEnd_toStartOf="@id/txtWon"
+            motion:layout_constraintTop_toBottomOf="@id/txtMonthly" />
+        <Constraint
+            android:id="@+id/txtWon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBaseline_toBaselineOf="@id/txtNonPayment"
+            motion:layout_constraintEnd_toEndOf="@id/txtMonthWon" />
+        <Constraint
+            android:id="@+id/viewDepositCompleted"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:alpha="0"
+            android:visibility="invisible"
             motion:layout_constraintBottom_toBottomOf="parent"
-            motion:layout_constraintStart_toEndOf="@id/btn2"
-            motion:layout_constraintTop_toTopOf="parent" />
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/viewIconCompleted"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginEnd="8dp"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/viewDepositCompleted"
+            motion:layout_constraintEnd_toStartOf="@id/txtDepositCompleted"
+            motion:layout_constraintHorizontal_chainStyle="packed"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/viewDepositCompleted" />
+        <Constraint
+            android:id="@+id/txtDepositCompleted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@id/viewDepositCompleted"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toEndOf="@id/viewIconCompleted"
+            motion:layout_constraintTop_toTopOf="@id/viewDepositCompleted" />
+
     </ConstraintSet>
+
 </MotionScene>

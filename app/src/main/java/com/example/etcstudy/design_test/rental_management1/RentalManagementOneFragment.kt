@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.FragmentRentalManagementOneBinding
@@ -11,8 +12,10 @@ import com.example.etcstudy.design_test.PaymentStatus
 import com.example.etcstudy.design_test.Rental
 import com.example.etcstudy.design_test.RentalStatusResult
 import com.example.etcstudy.design_test.dialog.SelectLastMonthThreeMonthDialog
+import com.example.etcstudy.design_test.tenant_detail.TenantDetailActivity
 import com.example.etcstudy.transform.custom.CustomProgressbar
 import com.example.etcstudy.transform.custom.ProgressItem
+import com.example.etcstudy.util.startActivity
 import com.google.android.material.tabs.TabLayout
 
 class RentalManagementOneFragment : Fragment() {
@@ -53,6 +56,10 @@ class RentalManagementOneFragment : Fragment() {
             }
 
         })
+
+        txtRentalStatus.setOnClickListener {
+            requireActivity().startActivity<TenantDetailActivity>()
+        }
     }
 
     private fun initProgressRentalStatus(progressRentalStatus: CustomProgressbar) {
@@ -75,15 +82,19 @@ class RentalManagementOneFragment : Fragment() {
     private fun setAdapter() : List<RentalStatusResult>{
         val list = mutableListOf<RentalStatusResult>()
         PaymentStatus.values().random()
+        val tenantNameList = listOf("김철수", "이다니엘아", "3층 원빌딩 회의실", "1층 서른커피", "일이삼사오육칠팔구십일이삼사오", "김민재", "5층 지원과", "원랩 회의실", "임차인", "꼬륵 도시락", "하하",
+            "테스트", "임차인", "안드로이드", "스튜디오", "제플린", "삼성", "LG", "APPLE", "기타", "사무실", "빌딩", "다이소")
+        val monthList = listOf("1월/2월/3월", "4월/5월/6월", "7월/8월/9월", "10월/11월/12월", "2월/3월/4월", "5월/6월/7월", "8월/9월/10월")
+        val selectMonthList = monthList.random().split("/")
         list.add(
             RentalStatusResult(
                 ho = "101호",
-                tenantName = "김철수",
-                startMonth = "6월",
+                tenantName = tenantNameList.random(),
+                startMonth = selectMonthList[0],
                 startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
+                middleMonth = selectMonthList[1],
                 middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
+                endMonth = selectMonthList[2],
                 endMonthStatus = Rental(PaymentStatus.values().random())
             )
         )
@@ -91,12 +102,12 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "102호",
-                tenantName = "이다니엘아",
-                startMonth = "6월",
+                tenantName = tenantNameList.random(),
+                startMonth = selectMonthList[0],
                 startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
+                middleMonth = selectMonthList[1],
                 middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
+                endMonth = selectMonthList[2],
                 endMonthStatus = Rental(PaymentStatus.values().random())
             )
         )
@@ -104,12 +115,12 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "201호",
-                tenantName = "3층 원빌딩 회의실",
-                startMonth = "6월",
+                tenantName = tenantNameList.random(),
+                startMonth = selectMonthList[0],
                 startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
+                middleMonth = selectMonthList[1],
                 middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
+                endMonth = selectMonthList[2],
                 endMonthStatus = Rental(PaymentStatus.values().random())
             )
         )
@@ -117,12 +128,12 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "305호",
-                tenantName = "1층 서른커피",
-                startMonth = "6월",
+                tenantName = tenantNameList.random(),
+                startMonth = selectMonthList[0],
                 startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
+                middleMonth = selectMonthList[1],
                 middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
+                endMonth = selectMonthList[2],
                 endMonthStatus = Rental(PaymentStatus.values().random())
             )
         )
@@ -130,12 +141,12 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "306호",
-                tenantName = "일이삼사오육칠팔구십일이삼사오",
-                startMonth = "6월",
+                tenantName = tenantNameList.random(),
+                startMonth = selectMonthList[0],
                 startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
+                middleMonth = selectMonthList[1],
                 middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
+                endMonth = selectMonthList[2],
                 endMonthStatus = Rental(PaymentStatus.values().random())
             )
         )
@@ -143,12 +154,12 @@ class RentalManagementOneFragment : Fragment() {
         list.add(
             RentalStatusResult(
                 ho = "306호",
-                tenantName = "일이삼사오육칠팔구십일이삼사오일이삼사오육칠팔구십일이삼사오일이삼사오육칠팔구십일이삼사오일이삼사오육칠팔구십일이삼사오",
-                startMonth = "6월",
+                tenantName = tenantNameList.random(),
+                startMonth = selectMonthList[0],
                 startMonthStatus = Rental(PaymentStatus.values().random()),
-                middleMonth = "7월",
+                middleMonth = selectMonthList[1],
                 middleMonthStatus = Rental(PaymentStatus.values().random()),
-                endMonth = "8월",
+                endMonth = selectMonthList[2],
                 endMonthStatus = Rental(PaymentStatus.values().random())
             )
         )

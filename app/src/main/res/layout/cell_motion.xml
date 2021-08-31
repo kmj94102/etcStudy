@@ -9,10 +9,10 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginHorizontal="20dp"
+        android:layout_height="320dp"
+        android:layout_marginHorizontal="27dp"
         android:layout_marginVertical="5dp"
-        app:cardCornerRadius="20dp"
+        app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,62 +26,336 @@
 
             <View
                 android:id="@+id/viewMore"
-                android:layout_width="50dp"
-                android:layout_height="100dp"
-                android:background="@drawable/bg_red_fill_20"
+                android:layout_width="41dp"
+                android:layout_height="67dp"
+                android:background="@drawable/bg_red_fill_16"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imgMore"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_baseline_format_list_bulleted_24"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_width="4dp"
+                android:layout_height="20dp"
+                android:paddingHorizontal="18dp"
+                android:paddingVertical="24dp"
+                android:src="@drawable/ic_more"
+                app:layout_constraintStart_toStartOf="@id/viewMore"
+                app:layout_constraintEnd_toEndOf="@id/viewMore"
+                app:layout_constraintTop_toTopOf="@id/viewMore"
+                app:layout_constraintBottom_toBottomOf="@id/viewMore"/>
 
-            <ImageView
+
+            <View
+                android:id="@+id/viewYield"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="22dp"
+                android:background="@drawable/ic_chart"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/labelYield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="@string/yield"
+                android:textColor="@color/text_color_secondary_38"
+                app:layout_constraintTop_toTopOf="@id/viewYield"
+                app:layout_constraintBottom_toBottomOf="@id/viewYield"
+                app:layout_constraintStart_toEndOf="@id/viewYield"/>
+
+            <TextView
+                android:id="@+id/txtYield"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="5.2%"
+                android:textColor="@color/text_color_secondary_38"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelYield"
+                app:layout_constraintStart_toEndOf="@id/labelYield"/>
+
+            <TextView
+                android:id="@+id/viewToday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingVertical="6dp"
+                android:paddingHorizontal="8dp"
+                android:text="8월 25일"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:background="@drawable/bg_sky_blue_round_5"
+                app:layout_constraintStart_toStartOf="@id/viewYield"
+                app:layout_constraintTop_toBottomOf="@id/viewYield"/>
+
+            <TextView
+                android:id="@+id/txtTenantName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="홍길동"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintTop_toBottomOf="@id/viewToday"
+                app:layout_constraintStart_toStartOf="@id/viewYield"/>
+
+            <TextView
+                android:id="@+id/txtArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="108㎡"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintBaseline_toBaselineOf="@id/txtTenantName"
+                app:layout_constraintStart_toEndOf="@id/txtTenantName"/>
+
+            <TextView
+                android:id="@+id/txtContractPeriod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="2020.01.02 ~ 2023.01.02 (D-35)"
+                android:textSize="14sp"
+                android:textColor="@color/text_color_secondary_38"
+                app:layout_constraintTop_toBottomOf="@id/txtTenantName"
+                app:layout_constraintStart_toStartOf="@id/viewYield"/>
+
+            <TextView
+                android:id="@+id/txtDeposit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="22dp"
+                android:text="보증금 2500만원"
+                android:textSize="16sp"
+                android:textColor="@color/text_color_secondary_38"
+                app:layout_constraintBottom_toTopOf="@id/txtMonthly"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <TextView
+                android:id="@+id/txtMonthWon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/won"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintBaseline_toBaselineOf="@id/txtMonthly"
+                app:layout_constraintEnd_toEndOf="@id/txtDeposit"/>
+
+            <TextView
+                android:id="@+id/txtMonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="11dp"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                android:textColor="@color/sky_blue"
+                android:fontFamily="@font/nanum_square_b"
+                android:text="4,852,000"
+                app:layout_constraintBottom_toTopOf="@id/txtNonPayment"
+                app:layout_constraintEnd_toStartOf="@id/txtMonthWon"/>
+
+            <TextView
+                android:id="@+id/txtMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/month"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintBaseline_toBaselineOf="@id/txtMonthly"
+                app:layout_constraintStart_toStartOf="@id/viewYield"/>
+
+            <TextView
+                android:id="@+id/txtNonPayment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="11dp"
+                android:text="- 1,852,000"
+                android:textSize="24sp"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintBottom_toTopOf="@id/viewDepositCompleted"
+                app:layout_constraintEnd_toStartOf="@id/txtWon"/>
+
+            <TextView
+                android:id="@+id/txtWon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/won"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintEnd_toEndOf="@id/txtMonthWon"
+                app:layout_constraintBaseline_toBaselineOf="@id/txtNonPayment"/>
+
+            <View
+                android:id="@+id/viewDepositCompleted"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/bg_gray_bottom_round_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/viewIconCompleted"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_complete"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/txtDepositCompleted"
+                app:layout_constraintTop_toTopOf="@id/viewDepositCompleted"
+                app:layout_constraintBottom_toBottomOf="@id/viewDepositCompleted" />
+
+            <TextView
+                android:id="@+id/txtDepositCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deposit_completed"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintStart_toEndOf="@id/viewIconCompleted"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/viewDepositCompleted"
+                app:layout_constraintBottom_toBottomOf="@id/viewDepositCompleted"/>
+
+
+
+
+            <!-- 더보기 영역 -->
+           <ImageView
                 android:id="@+id/imgClose"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="35dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:padding="24dp"
                 android:src="@drawable/ic_clear"
                 app:tint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btn1"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="20dp"
-                android:visibility="gone"
+            <ImageView
+                android:id="@+id/btnModify"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/bg_circle_white"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toStartOf="@id/btnMemo"/>
 
-            <Button
-                android:id="@+id/btn2"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="20dp"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/btn1"
-                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/viewModify"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/ic_modify"
+                android:backgroundTint="@color/red"
+                app:layout_constraintTop_toTopOf="@id/btnModify"
+                app:layout_constraintBottom_toBottomOf="@id/btnModify"
+                app:layout_constraintStart_toStartOf="@id/btnModify"
+                app:layout_constraintEnd_toEndOf="@id/btnModify"/>
 
-            <Button
-                android:id="@+id/btn3"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:layout_marginStart="20dp"
-                android:visibility="gone"
+            <TextView
+                android:id="@+id/txtModify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/modify"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintTop_toBottomOf="@id/btnModify"
+                app:layout_constraintStart_toStartOf="@id/btnModify"
+                app:layout_constraintEnd_toEndOf="@id/btnModify"/>
+
+
+            <ImageView
+                android:id="@+id/btnMemo"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/bg_circle_white"
+                app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@id/btn2"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@id/btnModify"
+                app:layout_constraintEnd_toStartOf="@id/btnGallery"/>
+
+            <View
+                android:id="@+id/viewMemo"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/ic_memo"
+                android:backgroundTint="@color/red"
+                app:layout_constraintTop_toTopOf="@id/btnMemo"
+                app:layout_constraintBottom_toBottomOf="@id/btnMemo"
+                app:layout_constraintStart_toStartOf="@id/btnMemo"
+                app:layout_constraintEnd_toEndOf="@id/btnMemo"/>
+
+            <TextView
+                android:id="@+id/txtMemo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/memo"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintTop_toBottomOf="@id/btnMemo"
+                app:layout_constraintStart_toStartOf="@id/btnMemo"
+                app:layout_constraintEnd_toEndOf="@id/btnMemo"/>
+
+
+            <ImageView
+                android:id="@+id/btnGallery"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:background="@drawable/bg_circle_white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnMemo"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/viewGallery"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="@drawable/ic_gallery"
+                android:backgroundTint="@color/red"
+                app:layout_constraintTop_toTopOf="@id/btnGallery"
+                app:layout_constraintBottom_toBottomOf="@id/btnGallery"
+                app:layout_constraintStart_toStartOf="@id/btnGallery"
+                app:layout_constraintEnd_toEndOf="@id/btnGallery"/>
+
+            <TextView
+                android:id="@+id/txtGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/gallery"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nanum_square_b"
+                app:layout_constraintTop_toBottomOf="@id/btnGallery"
+                app:layout_constraintStart_toStartOf="@id/btnGallery"
+                app:layout_constraintEnd_toEndOf="@id/btnGallery"/>
+
 
         </androidx.constraintlayout.motion.widget.MotionLayout>
 
