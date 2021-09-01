@@ -1,48 +1,64 @@
 package com.example.etcstudy.design_test.all_account
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.CellAddTenantBinding
 import com.example.etcstudy.databinding.CellMotionBinding
 import com.example.etcstudy.design_test.tenant_detail.TenantDetail
 
-class AnimationAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class AnimationAdapter(val onCompletionListener: (String?, Boolean) -> Unit) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private val currentList = mutableListOf<TenantDetail>()
 
     inner class DetailViewHolder(val binding : CellMotionBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(tenantDetail: TenantDetail) {
-            binding.imgMore.setOnClickListener {
-                Log.e("+++++", "imgMore click")
-                binding.motionLayout.transitionToEnd()
+        fun bind(tenantDetail: TenantDetail) = with(binding) {
+            imgMore.setOnClickListener {
+                motionLayout.transitionToEnd()
             }
-            binding.imgClose.setOnClickListener {
-                Log.e("+++++", "imgClose click")
-                binding.motionLayout.transitionToStart()
+            imgClose.setOnClickListener {
+                motionLayout.transitionToStart()
             }
 
-            binding.txtYield.text = tenantDetail.yield
-            binding.txtTenantName.text = tenantDetail.tenantName
-            binding.txtArea.text = tenantDetail.area
-            binding.txtContractPeriod.text = tenantDetail.contractPeriod
-            binding.txtDeposit.text = tenantDetail.deposit
-            binding.txtMonthly.text = tenantDetail.monthly
-            binding.txtNonPayment.text = tenantDetail.nonPayment
-            binding.viewDepositCompleted.setBackgroundResource(if (tenantDetail.isDepositCompleted == true) R.drawable.bg_sky_blue_bottom_round_16 else R.drawable.bg_gray_bottom_round_16)
+            txtYield.text = tenantDetail.yield
+            txtTenantName.text = tenantDetail.tenantName
+            txtArea.text = tenantDetail.area
+            txtContractPeriod.text = tenantDetail.contractPeriod
+            txtDeposit.text = tenantDetail.deposit
+            txtMonthly.text = tenantDetail.monthly
+            txtNonPayment.text = tenantDetail.nonPayment
+            viewDepositCompleted.setBackgroundResource(if (tenantDetail.isDepositCompleted == true) R.drawable.bg_sky_blue_bottom_round_16 else R.drawable.bg_gray_bottom_round_16)
 
             if (tenantDetail.nonPayment == "0"){
-                binding.txtNonPayment.isVisible = false
-                binding.txtWon.isVisible = false
+                txtNonPayment.setTextColor(txtNonPayment.context.getColor(R.color.text_color_secondary_38))
             }
 
-            binding.viewDepositCompleted.setOnClickListener {
-                if(tenantDetail.isDepositCompleted == true) return@setOnClickListener
+            viewDepositCompleted.setOnClickListener {
+                when(tenantDetail.isDepositCompleted){
+                    true->{
+                        tenantDetail.nonPayment = "-${tenantDetail.monthly}"
+                        tenantDetail.isDepositCompleted = false
+                        tenantDetail.nonPayMonths += ", ${tenantDetail.currentMonth}"
 
-                binding.viewDepositCompleted.setBackgroundResource(R.drawable.bg_sky_blue_bottom_round_16)
+                        viewDepositCompleted.setBackgroundResource(R.drawable.bg_gray_bottom_round_16)
+                        txtNonPayment.text = tenantDetail.nonPayment
+                        txtNonPayment.setTextColor(txtNonPayment.context.getColor(R.color.red))
+
+                        onCompletionListener(tenantDetail.currentMonth, false)
+                    }
+                    false->{
+                        tenantDetail.nonPayment = "0"
+                        tenantDetail.isDepositCompleted = true
+                        tenantDetail.nonPayMonths = tenantDetail.nonPayMonths?.replace(tenantDetail.currentMonth ?: "99", "")
+
+                        viewDepositCompleted.setBackgroundResource(R.drawable.bg_sky_blue_bottom_round_16)
+                        txtNonPayment.text = tenantDetail.nonPayment
+                        txtNonPayment.setTextColor(txtNonPayment.context.getColor(R.color.text_color_secondary_38))
+
+                        onCompletionListener(tenantDetail.currentMonth, true)
+                    }
+                }
             }
         }
     }
@@ -71,7 +87,7 @@ class AnimationAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         currentList.addAll(addList)
     }
 
-    fun getCurrentItem(position: Int) = currentList[position]
+    fun getCurrentItem(position: Int) = if(position < currentList.size) currentList[position] else null
 
     companion object {
         const val DETAILS = 0

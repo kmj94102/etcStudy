@@ -8,7 +8,8 @@ data class TenantDetail(
     val yield : String?,
     val deposit : String?,
     val monthly : String?,
-    val nonPayment : String?,
-    val nonPayMonths : String?,
+    val currentMonth : String?,
+    var nonPayment : String?,
+    var nonPayMonths : String?,
     var isDepositCompleted : Boolean?
 )

@@ -12,6 +12,8 @@ import androidx.databinding.BindingAdapter
 import com.example.etcstudy.transform.TestItem
 import com.skydoves.transformationlayout.TransformationCompat
 import com.skydoves.transformationlayout.TransformationLayout
+import java.text.SimpleDateFormat
+import java.util.*
 import kotlin.math.roundToInt
 
 inline fun <reified T: Activity> Context.startActivity(vararg params: Pair<String, Any?>) =
@@ -41,4 +43,13 @@ fun View.setLayoutMarginBottom(dimen: Float){
     val dp = this.context.resources.displayMetrics
     layoutParams.bottomMargin = (dimen * dp.density).roundToInt()
     this.layoutParams = layoutParams
+}
+
+fun getCurrentDateTime(): Date {
+    return Calendar.getInstance().time
+}
+
+fun Date.toString(format: String, locale: Locale = Locale.KOREA): String {
+    val formatter = SimpleDateFormat(format, locale)
+    return formatter.format(this)
 }

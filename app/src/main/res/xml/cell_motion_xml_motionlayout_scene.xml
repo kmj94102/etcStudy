@@ -219,7 +219,7 @@
             android:layout_marginTop="25dp"
             android:layout_marginEnd="22dp"
             android:alpha="0"
-            android:visibility="invisible"
+            android:visibility="gone"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintTop_toBottomOf="@id/txtContractPeriod" />
         <Constraint
@@ -227,7 +227,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
-            android:visibility="invisible"
+            android:visibility="gone"
             motion:layout_constraintBaseline_toBaselineOf="@id/txtMonthly"
             motion:layout_constraintEnd_toEndOf="@id/txtDeposit" />
         <Constraint
@@ -237,7 +237,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="11dp"
             android:alpha="0"
-            android:visibility="invisible"
+            android:visibility="gone"
             motion:layout_constraintEnd_toStartOf="@id/txtMonthWon"
             motion:layout_constraintTop_toBottomOf="@id/txtDeposit" />
         <Constraint
@@ -245,9 +245,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
-            android:visibility="invisible"
-            motion:layout_constraintBaseline_toBaselineOf="@id/txtMonthly"
-            motion:layout_constraintStart_toStartOf="@id/viewYield" />
+            android:visibility="invisible"/>
         <Constraint
             android:id="@+id/txtNonPayment"
             android:layout_width="wrap_content"
@@ -255,7 +253,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="11dp"
             android:alpha="0"
-            android:visibility="invisible"
+            android:visibility="gone"
             motion:layout_constraintEnd_toStartOf="@id/txtWon"
             motion:layout_constraintTop_toBottomOf="@id/txtMonthly" />
         <Constraint
@@ -263,7 +261,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:alpha="0"
-            android:visibility="invisible"
+            android:visibility="gone"
             motion:layout_constraintBaseline_toBaselineOf="@id/txtNonPayment"
             motion:layout_constraintEnd_toEndOf="@id/txtMonthWon" />
         <Constraint
