@@ -5,13 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.etcstudy.R
-import com.example.etcstudy.databinding.CellMotionBinding
 import com.example.etcstudy.databinding.FragmentAllAccountBinding
-import com.example.etcstudy.design_test.PaymentStatus
-import com.example.etcstudy.design_test.Rental
-import com.example.etcstudy.design_test.RentalStatusResult
-import com.example.etcstudy.design_test.tenant_detail.TenantDetail
+import com.example.etcstudy.util.startActivity
 
 class AllAccountFragment : Fragment() {
 
@@ -22,9 +17,9 @@ class AllAccountFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        val adapter = AnimationAdapter()
-//        binding.viewPager.adapter = adapter
-//        adapter.submitList(setAdapter())
+        binding.btn1.setOnClickListener {
+            requireActivity().startActivity<PlannerMainActivity>()
+        }
 
     }
 
