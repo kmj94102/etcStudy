@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EtcStudy">
         <activity
+            android:name=".ObjectAnimatorActivity"
+            android:exported="true" />
+        <activity
             android:name=".design_test.all_account.PlannerMainActivity"
             android:exported="true" />
         <activity

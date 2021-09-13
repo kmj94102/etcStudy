@@ -1,5 +1,6 @@
 package com.example.etcstudy
 
+import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.etcstudy.databinding.ActivityMainBinding
@@ -38,7 +39,12 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
 
-            btnDesign1.performClick()
+            btnObjectAnimator.setOnClickListener {
+                startActivity<ObjectAnimatorActivity>()
+                finish()
+            }
+
+//            btnDesign1.performClick()
         }
 
     }

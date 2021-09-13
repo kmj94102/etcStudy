@@ -3,72 +3,72 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable-v24/ic_clear.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_circle_round.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_cirlce_white.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_dot.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_gray_bottom_round_16.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_light_gray_round_4.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_circle.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_fill_20.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_fill_round_2.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_fill_round_20.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_round_7.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_roud_top.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_sky_blue_bottom_round_16.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_sky_blue_round_5.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_white_top_round_50.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_yellow_fill_round_2.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/dialog_payment.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/divider.xml" value="0.22135416666666666" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_arrow_back.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_back.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_calendar.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_clear.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_folder.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_icon_ic_calendar_w.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_list.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout-v28/fragment_rental_management_one.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_image_detail.xml" value="0.3515625" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_image_scroll.xml" value="0.11302083333333333" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_main.xml" value="0.19010416666666666" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_planner_main.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_rental_book.xml" value="0.5289691497366441" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_tenant_detail.xml" value="0.5" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_transform.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_transform_detail.xml" value="0.3515625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_tree.xml" value="0.3515625" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/bottom_sheet.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_add_tenant.xml" value="0.37864583333333335" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_derectory.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_file.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_image.xml" value="0.25" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_motion.xml" value="0.33" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_rental_status.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_rental_title.xml" value="0.37864583333333335" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_tenant_card.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_test.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_transition_detail_item.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_transition_select_item.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/custom_rental_status_view.xml" value="0.67" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/custom_select_month.xml" value="1.0" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/dialog_last_three_month.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/dialog_payment.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/dialog_select_last_three_month.xml" value="0.5" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_account_detail.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_all_account.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_home.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_rental_management_one.xml" value="0.25" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_rental_management_two.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/USER/AndroidStudioProjects/etcStudy/app/src/main/res/menu/design_bottom_navigation_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable-v24/ic_clear.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_dot.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_fill_20.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_fill_20_70.xml" value="0.21666666666666667" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_red_round_7.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_roud_top.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_sky_blue_round_7.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_skyblue_round_7.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_yellow_fill_round_2.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/bg_yellow_round_7.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_account_default.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_bank_default.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_down_fill.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_home_default.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_land_default.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_menu_all_account.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_menu_home.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_menu_land.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/ic_menu_rental_management.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/menu_home.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/drawable/menu_select_text.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_design.xml" value="0.3515625" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_image_scroll.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_object_animator.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/activity_rental_book.xml" value="0.3981762917933131" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_image.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_motion.xml" value="0.29971988795518206" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_rental_status.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/cell_test.xml" value="0.2441123188405797" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/custom_rental_status_view.xml" value="0.22" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_all_account.xml" value="0.21302083333333333" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_home.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_rental_management_one.xml" value="0.5" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/layout/fragment_rental_management_two.xml" value="0.5" />
+        <entry key="..\:/Users/kmj94/AndroidStudioProjects/etcStudy/app/src/main/res/menu/design_bottom_navigation_menu.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.22" />
+      </ProjectState>
+    </option>
   </component>
 </project>
