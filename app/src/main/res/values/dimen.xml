@@ -4,4 +4,7 @@
     <dimen name="margin_sixteen">16dp</dimen>
     <dimen name="margin_eleven">11dp</dimen>
     <dimen name="margin_five">5dp</dimen>
+    <dimen name="keyboard_out_padding">8dp</dimen>
+    <dimen name="keyboard_in_vertical_padding">4dp</dimen>
+    <dimen name="keyboard_in_horizontal_padding">4dp</dimen>
 </resources>

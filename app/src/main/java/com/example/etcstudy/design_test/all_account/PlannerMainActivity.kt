@@ -2,26 +2,30 @@ package com.example.etcstudy.design_test.all_account
 
 import android.content.Context
 import android.content.res.Resources
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
 import android.os.Bundle
+import android.os.Handler
+import android.os.SystemClock
+import android.transition.Fade
+import android.transition.Slide
 import android.transition.TransitionManager
-import android.util.Log
+import android.transition.TransitionSet
 import android.util.TypedValue
+import android.view.Gravity
+import android.view.MotionEvent
 import android.view.ViewGroup
-import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.example.etcstudy.R
 import com.example.etcstudy.databinding.ActivityPlannerMainBinding
+import com.example.etcstudy.util.dpToPx
+import com.example.etcstudy.util.toast
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
-import com.github.mikephil.charting.data.Entry
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
-import com.github.mikephil.charting.highlight.Highlight
-import com.github.mikephil.charting.listener.OnChartValueSelectedListener
-import java.util.logging.Handler
 
 class PlannerMainActivity : AppCompatActivity() {
 
@@ -72,6 +76,7 @@ class PlannerMainActivity : AppCompatActivity() {
             transparentCircleRadius = 65f
             isDrawHoleEnabled = true
             setHoleColor(android.R.color.transparent)
+            rotation = 340f
             animateY(1400, Easing.EaseInOutQuad)
             animate()
         }
@@ -80,6 +85,13 @@ class PlannerMainActivity : AppCompatActivity() {
 
     private fun initViews() = with(binding){
 
+        Handler(mainLooper).postDelayed({
+            val set = TransitionSet().addTransition(Slide(Gravity.END)).addTransition(Fade())
+            set.duration = 2000
+            TransitionManager.beginDelayedTransition(root, set)
+            txtPride.isVisible = true
+            viewPride.isVisible = true
+        },100)
 
         imgMore.setOnClickListener {
             TransitionManager.beginDelayedTransition(root)
@@ -100,11 +112,132 @@ class PlannerMainActivity : AppCompatActivity() {
                 viewMore.setBackgroundResource(R.drawable.ic_chevron_up_bold)
             }
         }
+
+        viewBack.setOnClickListener {
+            finish()
+        }
+
+        initRecyclerView()
+
     }
 
-    val Int.dp : Int
-        get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+    private fun initRecyclerView(){
+        val adapter = PlannerAdapter()
 
-    fun dpToPx(context: Context, dp: Float) : Float =
-        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics)
+        binding.recyclerView.adapter = adapter
+
+        adapter.submitList(
+            listOf(
+                PlannerItem(
+                    title = "Taxi to NY",
+                    description = "TRANSPORT",
+                    iconColorRes = R.color.red,
+                    iconRes = R.drawable.ic_home_hover,
+                    backgroundColorRes = R.color.yellow
+                ),
+                PlannerItem(
+                    title = "Monthly Rent",
+                    description = "HOUSING",
+                    iconColorRes = R.color.sky_blue,
+                    iconRes = R.drawable.ic_bank_hover,
+                    backgroundColorRes = Color.parseColor("#be8881")
+                ),
+                PlannerItem(
+                    title = "Bill Restaurant",
+                    description = "FUN LIFE",
+                    iconColorRes = R.color.black,
+                    iconRes = R.drawable.ic_calendar,
+                    backgroundColorRes = Color.parseColor("#a1a1a1")
+                ),PlannerItem(
+                    title = "FLIGHT TICKET",
+                    description = "TRAVEL",
+                    iconColorRes = R.color.yellow,
+                    iconRes = R.drawable.ic_memo,
+                    backgroundColorRes = R.color.red
+                ),
+                PlannerItem(
+                    title = "Taxi to NY",
+                    description = "TRANSPORT",
+                    iconColorRes = R.color.red,
+                    iconRes = R.drawable.ic_home_hover,
+                    backgroundColorRes = R.color.yellow
+                ),
+                PlannerItem(
+                    title = "Monthly Rent",
+                    description = "HOUSING",
+                    iconColorRes = R.color.sky_blue,
+                    iconRes = R.drawable.ic_bank_hover,
+                    backgroundColorRes = Color.parseColor("#be8881")
+                ),
+                PlannerItem(
+                    title = "Bill Restaurant",
+                    description = "FUN LIFE",
+                    iconColorRes = R.color.black,
+                    iconRes = R.drawable.ic_calendar,
+                    backgroundColorRes = Color.parseColor("#a1a1a1")
+                ),PlannerItem(
+                    title = "FLIGHT TICKET",
+                    description = "TRAVEL",
+                    iconColorRes = R.color.yellow,
+                    iconRes = R.drawable.ic_memo,
+                    backgroundColorRes = R.color.red
+                ),
+                PlannerItem(
+                    title = "Taxi to NY",
+                    description = "TRANSPORT",
+                    iconColorRes = R.color.red,
+                    iconRes = R.drawable.ic_home_hover,
+                    backgroundColorRes = R.color.yellow
+                ),
+                PlannerItem(
+                    title = "Monthly Rent",
+                    description = "HOUSING",
+                    iconColorRes = R.color.sky_blue,
+                    iconRes = R.drawable.ic_bank_hover,
+                    backgroundColorRes = Color.parseColor("#be8881")
+                ),
+                PlannerItem(
+                    title = "Bill Restaurant",
+                    description = "FUN LIFE",
+                    iconColorRes = R.color.black,
+                    iconRes = R.drawable.ic_calendar,
+                    backgroundColorRes = Color.parseColor("#a1a1a1")
+                ),PlannerItem(
+                    title = "FLIGHT TICKET",
+                    description = "TRAVEL",
+                    iconColorRes = R.color.yellow,
+                    iconRes = R.drawable.ic_memo,
+                    backgroundColorRes = R.color.red
+                ),PlannerItem(
+                    title = "Taxi to NY",
+                    description = "TRANSPORT",
+                    iconColorRes = R.color.red,
+                    iconRes = R.drawable.ic_home_hover,
+                    backgroundColorRes = R.color.yellow
+                ),
+                PlannerItem(
+                    title = "Monthly Rent",
+                    description = "HOUSING",
+                    iconColorRes = R.color.sky_blue,
+                    iconRes = R.drawable.ic_bank_hover,
+                    backgroundColorRes = Color.parseColor("#be8881")
+                ),
+                PlannerItem(
+                    title = "Bill Restaurant",
+                    description = "FUN LIFE",
+                    iconColorRes = R.color.black,
+                    iconRes = R.drawable.ic_calendar,
+                    backgroundColorRes = Color.parseColor("#a1a1a1")
+                ),PlannerItem(
+                    title = "FLIGHT TICKET",
+                    description = "TRAVEL",
+                    iconColorRes = R.color.yellow,
+                    iconRes = R.drawable.ic_memo,
+                    backgroundColorRes = R.color.red
+                )
+            )
+        )
+    }
+
+
 }

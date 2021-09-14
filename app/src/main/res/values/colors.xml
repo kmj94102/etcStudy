@@ -20,4 +20,5 @@
     <color name="dark_yellow">#D9A230</color>
     <color name="orange">#f7822c</color>
     <color name="sky_blue">#81B7bE</color>
+    <color name="sky_blue_ripple">#547073</color>
 </resources>

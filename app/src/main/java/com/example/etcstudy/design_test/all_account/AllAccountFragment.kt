@@ -21,6 +21,12 @@ class AllAccountFragment : Fragment() {
             requireActivity().startActivity<PlannerMainActivity>()
         }
 
+        binding.btn2.setOnClickListener {
+            requireActivity().startActivity<PlannerDetailActivity>()
+        }
+
+        binding.btn3.visibility = View.GONE
+
     }
 
 }

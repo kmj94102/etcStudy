@@ -122,15 +122,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:visibility="invisible"
         android:text="₩ 310,000"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@color/orange"
         android:fontFamily="@font/nanum_square_b"
         app:layout_constraintTop_toTopOf="@id/chart"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible"/>
 
     <View
+        android:id="@+id/viewPride"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/ic_broken_line"
@@ -138,10 +141,12 @@
         android:layout_marginBottom="-110dp"
         android:layout_marginEnd="-50dp"
         android:backgroundTint="@color/orange"
+        android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/txtPride"
         app:layout_constraintStart_toStartOf="@id/txtPride"
         app:layout_constraintBottom_toTopOf="@id/chart"
-        app:layout_constraintEnd_toStartOf="@id/chart"/>
+        app:layout_constraintEnd_toStartOf="@id/chart"
+        tools:visibility="visible"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutBottom"
@@ -152,7 +157,8 @@
         android:tag="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_height="500dp">
 
         <TextView
             android:id="@+id/txtCardTitle"
@@ -166,19 +172,21 @@
             android:textStyle="bold"
             android:fontFamily="@font/nanum_square_b"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/viewRed"
+            app:layout_constraintBottom_toTopOf="@id/recyclerView"
             app:layout_constraintStart_toStartOf="parent"/>
 
-        <View
-            android:id="@+id/viewRed"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:background="@color/red"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintTop_toBottomOf="@id/txtCardTitle"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/cell_planner"
+            tools:itemCount="3"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -187,7 +195,7 @@
         android:id="@+id/imgMore"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:padding="10dp"
+        android:padding="5dp"
         android:elevation="20dp"
         android:src="@drawable/bg_red_circle"
         android:layout_gravity="center_horizontal"

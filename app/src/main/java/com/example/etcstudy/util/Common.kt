@@ -3,8 +3,10 @@ package com.example.etcstudy.util
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
+import android.content.res.Resources
 import android.os.Parcelable
 import android.util.Log
+import android.util.TypedValue
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
@@ -53,3 +55,9 @@ fun Date.toString(format: String, locale: Locale = Locale.KOREA): String {
     val formatter = SimpleDateFormat(format, locale)
     return formatter.format(this)
 }
+
+val Int.dp : Int
+    get() = (this * Resources.getSystem().displayMetrics.density + 0.5f).toInt()
+
+fun dpToPx(context: Context, dp: Float) : Float =
+    TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics)
