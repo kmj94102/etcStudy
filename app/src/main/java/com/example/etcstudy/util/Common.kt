@@ -14,6 +14,8 @@ import androidx.databinding.BindingAdapter
 import com.example.etcstudy.transform.TestItem
 import com.skydoves.transformationlayout.TransformationCompat
 import com.skydoves.transformationlayout.TransformationLayout
+import java.lang.Exception
+import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.roundToInt
@@ -61,3 +63,33 @@ val Int.dp : Int
 
 fun dpToPx(context: Context, dp: Float) : Float =
     TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, context.resources.displayMetrics)
+
+fun Long.toAmountComma() : String = DecimalFormat("###,###").format(this)
+
+fun Long.toAmountCommaWon() : String = DecimalFormat("###,###").format(this).plus("원")
+
+fun String.removeAmountComma() : String {
+    val numString = this.replace(",", "")
+    if (numString.isEmpty()){
+        return "0"
+    }
+
+    return try {
+        numString.toLong().toString()
+    }catch (e : Exception){
+        "0"
+    }
+}
+
+fun String.removeAmountCommaWon() : String {
+    val numString = this.replace(",", "").replace("원", "")
+    if (numString.isEmpty()){
+        return "0"
+    }
+
+    return try {
+        numString.toLong().toString()
+    }catch (e : Exception){
+        "0"
+    }
+}

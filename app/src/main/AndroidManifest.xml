@@ -12,6 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EtcStudy">
         <activity
+            android:name=".design_test.draft2.Draft2Activity"
+            android:exported="true" />
+        <activity android:name=".design_test.all_account.PlannerDetailActivity"
+            android:exported="true"/>
+        <activity
             android:name=".ObjectAnimatorActivity"
             android:exported="true" />
         <activity

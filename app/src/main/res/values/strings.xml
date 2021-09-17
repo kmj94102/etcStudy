@@ -50,4 +50,5 @@
     <string name="zero">0</string>
     <string name="hundred">00</string>
     <string name="thousand">000</string>
+    <string name="complete">완료</string>
 </resources>

@@ -14,6 +14,7 @@ import android.view.ViewAnimationUtils
 import android.view.ViewGroup
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.view.inputmethod.InputMethodManager
+import android.widget.EditText
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.transition.addListener
 import androidx.core.transition.doOnEnd
@@ -63,18 +64,21 @@ class HomeFragment : Fragment() {
 
         setChart()
 
-//        binding.editText.onFocusChangeListener = focusChangeListener
-
-        binding.btnTest.setOnClickListener {
-            CustomKeyPadDialog(requireActivity(), binding.root, binding.editText).show()
-        }
-
         binding.editText.apply {
             setTextIsSelectable(true)
             showSoftInputOnFocus = false
             onFocusChangeListener = focusChangeListener
             setOnClickListener {
-                CustomKeyPadDialog(requireActivity(), binding.root, binding.editText).show()
+                CustomKeyPadDialog(requireActivity(), binding.root, this, this.nextFocusDownId).show()
+            }
+        }
+
+        binding.editText2.apply {
+            setTextIsSelectable(true)
+            showSoftInputOnFocus = false
+            onFocusChangeListener = focusChangeListener
+            setOnClickListener {
+                CustomKeyPadDialog(requireActivity(), binding.root, this, this.nextFocusDownId).show()
             }
         }
 
@@ -153,7 +157,7 @@ class HomeFragment : Fragment() {
     private val focusChangeListener = View.OnFocusChangeListener{ v, hasFocus ->
         if(!hasFocus) return@OnFocusChangeListener
 
-        CustomKeyPadDialog(requireActivity(), binding.root, binding.editText).show()
+        CustomKeyPadDialog(requireActivity(), binding.root, v as EditText, v.nextFocusDownId).show()
 //        binding.keyPadView.setFocusedView(v)
 //
         val imm = requireActivity().getSystemService(InputMethodManager::class.java)

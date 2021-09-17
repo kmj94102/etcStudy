@@ -18,7 +18,11 @@
     <color name="red_90">#E6E45655</color>
     <color name="yellow">#F7B52C</color>
     <color name="dark_yellow">#D9A230</color>
-    <color name="orange">#f7822c</color>
+    <color name="orange">#ff990a</color>
     <color name="sky_blue">#81B7bE</color>
     <color name="sky_blue_ripple">#547073</color>
+    <color name="mint">#5cc6ba</color>
+    <color name="background_mint">#f0f4f3</color>
+    <color name="dark_mint">#2a978a</color>
+    <color name="charcoal_grey">#3a4a47</color>
 </resources>

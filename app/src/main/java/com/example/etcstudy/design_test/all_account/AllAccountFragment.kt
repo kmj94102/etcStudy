@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.etcstudy.databinding.FragmentAllAccountBinding
+import com.example.etcstudy.design_test.draft2.Draft2Activity
 import com.example.etcstudy.util.startActivity
 
 class AllAccountFragment : Fragment() {
@@ -25,7 +26,9 @@ class AllAccountFragment : Fragment() {
             requireActivity().startActivity<PlannerDetailActivity>()
         }
 
-        binding.btn3.visibility = View.GONE
+        binding.btn3.setOnClickListener {
+            requireActivity().startActivity<Draft2Activity>()
+        }
 
     }
 
