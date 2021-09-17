@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="66dp"
+    android:layout_height="74dp"
+    android:background="@drawable/ic_calendar2"
+    android:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/txtMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/nanum_square_b"
+        android:shadowColor="@color/white"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="01"/>
+
+    <View
+        android:id="@+id/viewCompletedStamp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/ic_complete_stamp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:text="완 납"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:textColor="@color/orange"
+        android:fontFamily="@font/nanum_square_b"
+        app:layout_constraintBottom_toBottomOf="@id/viewCompletedStamp"
+        app:layout_constraintStart_toStartOf="@id/viewCompletedStamp"
+        app:layout_constraintEnd_toEndOf="@id/viewCompletedStamp"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="viewCompletedStamp, txtCompleted"/>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginBottom="26dp"
+        android:background="#d8d8d8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="+"
+        android:textColor="@color/mint"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:fontFamily="@font/nanum_square_b"
+        android:shadowColor="@color/mint"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        app:layout_constraintTop_toTopOf="@id/txtReceivedAmount"
+        app:layout_constraintBottom_toBottomOf="@id/txtReceivedAmount"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtReceivedAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="6dp"
+        android:textColor="@color/mint"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:fontFamily="@font/nanum_square_b"
+        android:shadowColor="@color/mint"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        app:layout_constraintBottom_toTopOf="@id/viewLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="100만원"/>
+
+    <TextView
+        android:id="@+id/txtMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="-"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:fontFamily="@font/nanum_square_b"
+        android:shadowColor="@color/orange"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        app:layout_constraintTop_toTopOf="@id/txtRemainingAmount"
+        app:layout_constraintBottom_toBottomOf="@id/txtRemainingAmount"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtRemainingAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="6dp"
+        android:textColor="@color/orange"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:fontFamily="@font/nanum_square_b"
+        android:shadowColor="@color/orange"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="1"
+        app:layout_constraintTop_toBottomOf="@id/viewLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="100만원"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
