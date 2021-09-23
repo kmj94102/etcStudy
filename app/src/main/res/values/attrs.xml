@@ -12,4 +12,9 @@
         <attr name="selectMonthTextColorRes" format="reference"/>
         <attr name="selectMonthDotColorRes" format="reference"/>
     </declare-styleable>
+    <declare-styleable name="MonthlyCalendarView">
+        <attr name="isComplete" format="boolean"/>
+        <attr name="isContentsVisible" format="boolean"/>
+        <attr name="isEnable" format="boolean"/>
+    </declare-styleable>
 </resources>

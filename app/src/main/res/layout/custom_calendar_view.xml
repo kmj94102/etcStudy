@@ -6,8 +6,18 @@
     android:id="@+id/layoutRoot"
     android:layout_width="66dp"
     android:layout_height="74dp"
-    android:background="@drawable/ic_calendar2"
     android:layout_gravity="center">
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="66dp"
+        android:layout_height="74dp"
+        android:background="@drawable/ic_calendar2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
     <TextView
         android:id="@+id/txtMonth"
@@ -63,6 +73,7 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_marginBottom="26dp"
+        android:layout_marginHorizontal="1dp"
         android:background="#d8d8d8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -139,5 +150,11 @@
         app:layout_constraintTop_toBottomOf="@id/viewLine"
         app:layout_constraintEnd_toEndOf="parent"
         tools:text="100만원"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/groupContents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="viewLine, txtPlus, txtMinus, txtReceivedAmount, txtRemainingAmount"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

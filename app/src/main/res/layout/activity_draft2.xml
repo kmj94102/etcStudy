@@ -12,6 +12,10 @@
         android:id="@+id/layoutTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/background_mint"
+        android:elevation="4dp"
+        android:outlineAmbientShadowColor="@color/mint"
+        android:outlineSpotShadowColor="@color/mint"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
@@ -52,13 +56,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:background="#8D73ACA6"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+<!--        <View-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#8D73ACA6"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -81,10 +85,6 @@
         android:textSize="23sp"
         android:textColor="@color/mint"
         android:text="9"
-        android:shadowColor="@color/mint"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
         app:layout_constraintBottom_toBottomOf="@id/viewCalendarCurrentMonth"
         app:layout_constraintStart_toStartOf="@id/viewCalendarCurrentMonth"
         app:layout_constraintEnd_toEndOf="@id/viewCalendarCurrentMonth"/>
@@ -100,10 +100,6 @@
         android:textStyle="bold"
         android:textColor="@color/charcoal_grey"
         android:fontFamily="@font/nanum_square_b"
-        android:shadowColor="@color/charcoal_grey"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
         app:layout_constraintTop_toBottomOf="@id/layoutTitle"
         app:layout_constraintStart_toEndOf="@id/viewCalendarCurrentMonth"/>
 
@@ -116,10 +112,6 @@
         android:textStyle="bold"
         android:textColor="@color/charcoal_grey"
         android:fontFamily="@font/nanum_square_b"
-        android:shadowColor="@color/charcoal_grey"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
         app:layout_constraintTop_toBottomOf="@id/txtCurrentMonthDate"
         app:layout_constraintStart_toStartOf="@id/txtCurrentMonthDate"/>
 
@@ -132,202 +124,31 @@
         app:layout_constraintTop_toBottomOf="@id/layoutTitle"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
+        android:layout_height="234dp"
         android:layout_marginTop="18dp"
-        app:cardCornerRadius="16dp"
-        app:cardBackgroundColor="@color/white"
-        app:layout_constraintTop_toBottomOf="@id/viewCalendarCurrentMonth"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:overScrollMode="never"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/viewCalendarCurrentMonth"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/txtBuildingName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:layout_marginStart="20dp"
-                android:text="비오피스텔"
-                android:textColor="@color/charcoal_grey"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                android:fontFamily="@font/nanum_square_b"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <View
-                android:id="@+id/viewLine"
-                android:layout_width="1dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="12dp"
-                android:background="@color/charcoal_grey"
-                app:layout_constraintTop_toTopOf="@id/txtBuildingName"
-                app:layout_constraintBottom_toBottomOf="@id/txtBuildingName"
-                app:layout_constraintStart_toEndOf="@id/txtBuildingName"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:text="82㎡"
-                android:textColor="@color/charcoal_grey"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                app:layout_constraintTop_toTopOf="@id/txtBuildingName"
-                app:layout_constraintBottom_toBottomOf="@id/txtBuildingName"
-                app:layout_constraintStart_toEndOf="@id/viewLine"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="2020.01.02 ~ 2023.0102"
-                android:textColor="@color/charcoal_grey"
-                android:textStyle="bold"
-                android:textSize="14sp"
-                app:layout_constraintTop_toBottomOf="@id/txtBuildingName"
-                app:layout_constraintStart_toStartOf="@id/txtBuildingName"/>
-
-            <LinearLayout
-                android:id="@+id/layoutYield"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingHorizontal="11dp"
-                android:paddingVertical="8dp"
-                android:background="@drawable/bg_light_mint_round_3"
-                android:orientation="horizontal"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="20dp">
-
-                <View
-                    android:layout_width="17dp"
-                    android:layout_height="14dp"
-                    android:background="@drawable/ic_chart2"
-                    android:backgroundTint="@color/mint"
-                    android:layout_gravity="center_vertical"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="7dp"
-                    android:text="3.25%"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/mint"
-                    android:fontFamily="@font/nanum_square_b"/>
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/txtTenantName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="홍길동"
-                android:textSize="34sp"
-                android:textStyle="bold"
-                android:textColor="@color/charcoal_grey"
-                android:fontFamily="@font/nanum_square_b"
-                app:layout_constraintStart_toStartOf="@id/txtBuildingName"
-                app:layout_constraintBottom_toBottomOf="@id/btnPayment"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:text="1504호"
-                android:textColor="@color/mint"
-                android:textSize="22sp"
-                android:textStyle="bold"
-                android:fontFamily="@font/nanum_square_b"
-                app:layout_constraintBottom_toBottomOf="@id/txtTenantName"
-                app:layout_constraintStart_toEndOf="@id/txtTenantName"/>
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnPayment"
-                android:layout_width="72dp"
-                android:layout_height="72dp"
-                android:layout_marginTop="16dp"
-                android:text="납부"
-                android:textSize="12sp"
-                android:textColor="@color/white"
-                android:shadowColor="@color/white"
-                android:shadowDx="1"
-                android:shadowDy="1"
-                android:shadowRadius="1"
-                android:background="@drawable/bg_payment_btn"
-                app:layout_constraintTop_toBottomOf="@id/layoutYield"
-                app:layout_constraintEnd_toEndOf="@id/layoutYield"/>
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardPayment"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="22dp"
-                android:layout_marginHorizontal="20dp"
-                app:cardBackgroundColor="#f0f4f3"
-                app:cardCornerRadius="8dp"
-                app:layout_constraintTop_toBottomOf="@id/txtTenantName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="\"
-                    android:textColor="@color/charcoal_grey"
-                    android:textSize="16sp"
-                    android:shadowColor="@color/charcoal_grey"
-                    android:shadowDx="1"
-                    android:shadowDy="1"
-                    android:shadowRadius="1"
-                    android:layout_gravity="start|center_vertical"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="- 1,852,000"
-                    android:textColor="@color/orange"
-                    android:textStyle="bold"
-                    android:textSize="26sp"
-                    android:layout_gravity="end|center_vertical"/>
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="10dp"
-                android:text="2500만원 / 120만원"
-                android:textColor="@color/dark_mint"
-                android:textSize="12sp"
-                app:layout_constraintTop_toBottomOf="@id/cardPayment"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@id/cardPayment" />
-
-       </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <View
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
         android:id="@+id/viewIndicator"
-        android:layout_width="58dp"
+        android:layout_width="wrap_content"
         android:layout_height="6dp"
         android:layout_marginTop="18dp"
-        android:background="@color/mint"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
+        app:dotsColor="#d8d8d8"
+        app:dotsCornerRadius="2dp"
+        app:dotsSize="7dp"
+        app:dotsSpacing="6dp"
+        app:dotsWidthFactor="6.4"
+        app:selectedDotColor="@color/mint"
+        app:progressMode="true"
+        app:layout_constraintTop_toBottomOf="@id/viewPager"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -347,11 +168,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="20dp"
         app:cardCornerRadius="4dp"
         app:cardBackgroundColor="@color/mint"
+        app:cardElevation="0dp"
         app:layout_constraintTop_toTopOf="@id/viewBackgroundWhite"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="@id/viewCalendarJanuary">
 
         <TextView
             android:id="@+id/txtSelectYear"
@@ -362,10 +183,6 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:fontFamily="@font/nanum_square_b"
-            android:shadowColor="@color/white"
-            android:shadowDy="1"
-            android:shadowDx="1"
-            android:shadowRadius="1"
             android:drawablePadding="8dp"
             android:drawableTint="@color/white"
             android:layout_marginVertical="8dp"
@@ -374,147 +191,134 @@
 
     </androidx.cardview.widget.CardView>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarJanuary"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginTop="18dp"
-        android:background="@drawable/ic_calendar2"
+        android:layout_marginStart="20dp"
+        app:isContentsVisible="false"
+        app:isComplete="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintTop_toBottomOf="@id/cardSelectYear"
-        app:layout_constraintStart_toStartOf="@id/cardSelectYear"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/viewCalendarFebruary"/>
 
-    <View
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="9dp"
-        android:background="@drawable/ic_complete_stamp"
-        app:layout_constraintBottom_toBottomOf="@id/viewCalendarJanuary"
-        app:layout_constraintStart_toStartOf="@id/viewCalendarJanuary"
-        app:layout_constraintEnd_toEndOf="@id/viewCalendarJanuary"/>
-
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarFebruary"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="false"
+        app:isComplete="true"
         app:layout_constraintTop_toTopOf="@id/viewCalendarJanuary"
-        app:layout_constraintStart_toEndOf="@id/viewCalendarJanuary"/>
+        app:layout_constraintStart_toEndOf="@id/viewCalendarJanuary"
+        app:layout_constraintEnd_toStartOf="@id/viewCalendarMarch"/>
 
-    <View
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="9dp"
-        android:background="@drawable/ic_complete_stamp"
-        app:layout_constraintBottom_toBottomOf="@id/viewCalendarFebruary"
-        app:layout_constraintStart_toStartOf="@id/viewCalendarFebruary"
-        app:layout_constraintEnd_toEndOf="@id/viewCalendarFebruary"/>
-
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarMarch"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="false"
+        app:isComplete="true"
         app:layout_constraintTop_toTopOf="@id/viewCalendarFebruary"
-        app:layout_constraintStart_toEndOf="@id/viewCalendarFebruary"/>
+        app:layout_constraintStart_toEndOf="@id/viewCalendarFebruary"
+        app:layout_constraintEnd_toStartOf="@id/viewCalendarApril"/>
 
-    <View
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="9dp"
-        android:background="@drawable/ic_complete_stamp"
-        app:layout_constraintBottom_toBottomOf="@id/viewCalendarMarch"
-        app:layout_constraintStart_toStartOf="@id/viewCalendarMarch"
-        app:layout_constraintEnd_toEndOf="@id/viewCalendarMarch"/>
-
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarApril"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2"
+        android:layout_marginEnd="20dp"
+        app:isContentsVisible="false"
+        app:isComplete="true"
         app:layout_constraintTop_toTopOf="@id/viewCalendarMarch"
-        app:layout_constraintStart_toEndOf="@id/viewCalendarMarch"/>
+        app:layout_constraintStart_toEndOf="@id/viewCalendarMarch"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <View
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="9dp"
-        android:background="@drawable/ic_complete_stamp"
-        app:layout_constraintBottom_toBottomOf="@id/viewCalendarApril"
-        app:layout_constraintStart_toStartOf="@id/viewCalendarApril"
-        app:layout_constraintEnd_toEndOf="@id/viewCalendarApril"/>
-
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarMay"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginTop="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="true"
+        app:isComplete="false"
         app:layout_constraintTop_toBottomOf="@id/viewCalendarJanuary"
         app:layout_constraintStart_toStartOf="@id/cardSelectYear"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarJune"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="true"
+        app:isComplete="false"
         app:layout_constraintTop_toTopOf="@id/viewCalendarMay"
         app:layout_constraintStart_toEndOf="@id/viewCalendarMay"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarJuly"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="true"
+        app:isComplete="false"
         app:layout_constraintTop_toTopOf="@id/viewCalendarJune"
         app:layout_constraintStart_toEndOf="@id/viewCalendarJune"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarAugust"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="true"
+        app:isComplete="false"
         app:layout_constraintTop_toTopOf="@id/viewCalendarJuly"
         app:layout_constraintStart_toEndOf="@id/viewCalendarJuly"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarSeptember"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginTop="18dp"
-        android:background="@drawable/ic_calendar2"
+        app:isContentsVisible="false"
+        app:isComplete="false"
+        app:isEnable="false"
         app:layout_constraintTop_toBottomOf="@id/viewCalendarMay"
         app:layout_constraintStart_toStartOf="@id/cardSelectYear"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarOctober"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2_enable"
+        app:isContentsVisible="false"
+        app:isComplete="false"
+        app:isEnable="false"
         app:layout_constraintTop_toTopOf="@id/viewCalendarSeptember"
         app:layout_constraintStart_toEndOf="@id/viewCalendarSeptember"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarNovember"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2_enable"
+        app:isContentsVisible="false"
+        app:isComplete="false"
+        app:isEnable="false"
         app:layout_constraintTop_toTopOf="@id/viewCalendarOctober"
         app:layout_constraintStart_toEndOf="@id/viewCalendarOctober"/>
 
-    <View
+    <com.example.etcstudy.design_test.custom.MonthlyCalendarView
         android:id="@+id/viewCalendarDecember"
         android:layout_width="66dp"
         android:layout_height="74dp"
         android:layout_marginStart="18dp"
-        android:background="@drawable/ic_calendar2_enable"
+        app:isContentsVisible="false"
+        app:isComplete="false"
+        app:isEnable="false"
         app:layout_constraintTop_toTopOf="@id/viewCalendarNovember"
         app:layout_constraintStart_toEndOf="@id/viewCalendarNovember"/>
 
