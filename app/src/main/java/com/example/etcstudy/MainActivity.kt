@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
 
-//            btnDesign1.performClick()
+            btnDesign1.performClick()
         }
 
     }

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray_enabled"
+        tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnOne"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/keyboard_out_padding"
+            android:layout_marginStart="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/one"
+            android:tag="@string/one"
+            android:text="@string/one"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnTwo"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/two"
+            android:tag="@string/two"
+            android:text="@string/two"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnThree"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/three"
+            android:tag="@string/three"
+            android:text="@string/three"/>
+
+        <ImageButton
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_backspace"
+            android:background="@color/white"
+            android:layout_marginEnd="@dimen/keyboard_out_padding"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/three"
+            app:tint="@color/black" />
+
+<!--        <View-->
+<!--            android:layout_width="24dp"-->
+<!--            android:layout_height="24dp"-->
+<!--            android:background="@drawable/ic_backspace"-->
+<!--            android:elevation="3dp"-->
+<!--            android:backgroundTint="@color/black"-->
+<!--            app:layout_constraintTop_toTopOf="@id/btnBack"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/btnBack"-->
+<!--            app:layout_constraintStart_toStartOf="@id/btnBack"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/btnBack"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray_enabled">
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnFour"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/keyboard_in_vertical_padding"
+            android:layout_marginStart="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/four"
+            android:tag="@string/four"
+            android:text="@string/four"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnFive"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/five"
+            android:tag="@string/five"
+            android:text="@string/five"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnSix"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/six"
+            android:tag="@string/six"
+            android:text="@string/six"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnAllDelete"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:text="전체\n삭제"
+            android:textSize="14sp"
+            android:lineSpacingExtra="3sp"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:layout_marginEnd="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/three"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray_enabled">
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnSeven"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/keyboard_in_vertical_padding"
+            android:layout_marginStart="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/seven"
+            android:tag="@string/seven"
+            android:text="@string/seven"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnEight"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/eight"
+            android:tag="@string/eight"
+            android:text="@string/eight"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnNine"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/nine"
+            android:tag="@string/nine"
+            android:text="@string/nine"/>
+
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnNone2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:layout_marginEnd="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/three"
+            android:enabled="false"
+            android:backgroundTint="@color/gray_enabled"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/gray_enabled">
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnZero"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/keyboard_in_vertical_padding"
+            android:layout_marginStart="@dimen/keyboard_out_padding"
+            android:layout_marginBottom="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/zero"
+            android:tag="@string/zero"
+            android:text="@string/zero"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnHundred"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/hundred"
+            android:tag="@string/hundred"
+            android:text="@string/hundred"/>
+
+        <Button
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnThousand"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:contentDescription="@string/thousand"
+            android:tag="@string/thousand"
+            android:text="@string/thousand"/>
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/App.Button.NumberPad"
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/keyboard_in_horizontal_padding"
+            android:layout_marginEnd="@dimen/keyboard_out_padding"
+            android:contentDescription="@string/complete"
+            android:textSize="14sp"
+            android:tag="@string/complete"
+            android:text="@string/complete"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/sky_blue"
+            app:rippleColor="@color/sky_blue_ripple"/>
+    </LinearLayout>
+</merge>
