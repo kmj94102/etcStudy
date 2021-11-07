@@ -17,4 +17,8 @@
         <attr name="isContentsVisible" format="boolean"/>
         <attr name="isEnable" format="boolean"/>
     </declare-styleable>
+    <declare-styleable name="CustomCalendarItem">
+        <attr name="date" format="string"/>
+        <attr name="isSelected" format="boolean"/>
+    </declare-styleable>
 </resources>

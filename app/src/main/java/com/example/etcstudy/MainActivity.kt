@@ -7,6 +7,7 @@ import com.example.etcstudy.databinding.ActivityMainBinding
 import com.example.etcstudy.design_test.DesignActivity
 import com.example.etcstudy.tree_structure.TreeActivity
 import com.example.etcstudy.image_scroll.ImageScrollActivity
+import com.example.etcstudy.tenant.RegisterTenantActivity
 import com.example.etcstudy.transform.TransformActivity
 import com.example.etcstudy.util.startActivity
 
@@ -44,7 +45,13 @@ class MainActivity : AppCompatActivity() {
                 finish()
             }
 
-            btnDesign1.performClick()
+            btnRegisterTenat.setOnClickListener {
+                startActivity<RegisterTenantActivity>()
+                finish()
+            }
+
+            btnRegisterTenat.performClick()
+
         }
 
     }

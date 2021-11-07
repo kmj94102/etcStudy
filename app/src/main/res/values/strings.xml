@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">etcStudy</string>
     <string name="rental_book">임대료관리</string>
-    <string name="home">홈</string>
     <string name="rental_management1">임대료관리1</string>
     <string name="rental_management2">임대료관리2</string>
     <string name="all_account">전체계좌</string>
@@ -12,7 +11,6 @@
     <string name="select_month">%1$d월 ~ %2$d월</string>
     <string name="description_select_last_month">조회하고 싶은 마지막 달을 선택해주세요</string>
     <string name="ok">확인</string>
-    <string name="cancel">취소</string>
     <string name="january">1월</string>
     <string name="february">2월</string>
     <string name="march">3월</string>
@@ -29,9 +27,7 @@
     <string name="rent_amt">임대료</string>
     <string name="manage_amt">관리비</string>
     <string name="input_amount">금액 입력</string>
-    <string name="modify">수정</string>
     <string name="memo">메모</string>
-    <string name="gallery">갤러리</string>
     <string name="yield">수익률</string>
     <string name="won">원</string>
     <string name="month">월</string>
@@ -51,4 +47,37 @@
     <string name="hundred">00</string>
     <string name="thousand">000</string>
     <string name="complete">완료</string>
+
+
+
+
+
+    <!-- 홈 -->
+    <string name="home">홈</string>
+
+    <!-- 내 매물 -->
+    <string name="real_estate">내 매물</string>
+    <string name="rent_rooms">호수(호실)</string>
+
+    <!-- 이미지 -->
+    <string name="image">이미지</string>
+    <string name="image_upload">이미지 올리기</string>
+    <string name="gallery">앨범</string>
+    <string name="camera">카메라</string>
+    <string name="download">다운로드</string>
+    <string name="share">공유</string>
+    <string name="delete">삭제</string>
+    <string name="guide_image_upload">업로드 방식을 선택해주세요</string>
+    <string name="guide_image_download">해당 이미지를\n다운로드 받으시겠습니까?</string>
+    <string name="guide_image_delete">해당 이미지를\n삭제 받으시겠습니까?</string>
+
+    <!-- 투자정보 -->
+    <string name="investment_information">투자정보</string>
+
+    <!-- Default -->
+    <string name="modify">수정</string>
+    <string name="cancel">취소</string>
+    <string name="permission_denied_message">앱을 사용하기 위해서는 권한 허용이 필요합니다.\n\n[휴대폰 설정] > [앱 또는 어플리케이션 관리] > [마이빌딩북] > [권한]에서 해당 권한을 활성화 해주세요.\n\n바로 권한 허용 하시려면 설정 버튼을 선택 해주세요.</string>
+
+
 </resources>

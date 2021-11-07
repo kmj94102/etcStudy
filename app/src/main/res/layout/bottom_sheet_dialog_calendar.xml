@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        style="@style/koreanTextSize16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="임차인의 매월 납입일을 선택해주세요."
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpUsage" />
+
+    <com.example.etcstudy.tenant.CustomCalendarGroup
+        android:id="@+id/calendarGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle">
+
+        <!-- Date 1 ~ 7 -->
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="1"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/itemDate2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="2"
+            app:layout_constraintStart_toEndOf="@id/itemDate1"
+            app:layout_constraintEnd_toStartOf="@id/itemDate3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="3"
+            app:layout_constraintStart_toEndOf="@id/itemDate2"
+            app:layout_constraintEnd_toStartOf="@id/itemDate4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="4"
+            app:layout_constraintStart_toEndOf="@id/itemDate3"
+            app:layout_constraintEnd_toStartOf="@id/itemDate5"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="5"
+            app:layout_constraintStart_toEndOf="@id/itemDate4"
+            app:layout_constraintEnd_toStartOf="@id/itemDate6"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="6"
+            app:layout_constraintStart_toEndOf="@id/itemDate5"
+            app:layout_constraintEnd_toStartOf="@id/itemDate7"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="7"
+            app:layout_constraintStart_toEndOf="@id/itemDate6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Date 8 ~ 14 -->
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:date="8"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/itemDate9"
+            app:layout_constraintTop_toBottomOf="@id/itemDate1" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="9"
+            app:layout_constraintTop_toTopOf="@id/itemDate8"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate8"
+            app:layout_constraintStart_toEndOf="@id/itemDate8"
+            app:layout_constraintEnd_toStartOf="@id/itemDate10"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="10"
+            app:layout_constraintTop_toTopOf="@id/itemDate8"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate8"
+            app:layout_constraintStart_toEndOf="@id/itemDate9"
+            app:layout_constraintEnd_toStartOf="@id/itemDate11"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="11"
+            app:layout_constraintTop_toTopOf="@id/itemDate8"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate8"
+            app:layout_constraintStart_toEndOf="@id/itemDate10"
+            app:layout_constraintEnd_toStartOf="@id/itemDate12"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="12"
+            app:layout_constraintTop_toTopOf="@id/itemDate8"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate8"
+            app:layout_constraintStart_toEndOf="@id/itemDate11"
+            app:layout_constraintEnd_toStartOf="@id/itemDate13"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="13"
+            app:layout_constraintTop_toTopOf="@id/itemDate8"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate8"
+            app:layout_constraintStart_toEndOf="@id/itemDate12"
+            app:layout_constraintEnd_toStartOf="@id/itemDate14"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="14"
+            app:layout_constraintTop_toTopOf="@id/itemDate8"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate8"
+            app:layout_constraintStart_toEndOf="@id/itemDate13"
+            app:layout_constraintEnd_toEndOf="@id/itemDate7"/>
+
+        <!-- 15 ~ 21 -->
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:date="15"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/itemDate16"
+            app:layout_constraintTop_toBottomOf="@id/itemDate8" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="16"
+            app:layout_constraintTop_toTopOf="@id/itemDate15"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate15"
+            app:layout_constraintStart_toEndOf="@id/itemDate15"
+            app:layout_constraintEnd_toStartOf="@id/itemDate17"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="17"
+            app:layout_constraintTop_toTopOf="@id/itemDate15"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate15"
+            app:layout_constraintStart_toEndOf="@id/itemDate16"
+            app:layout_constraintEnd_toStartOf="@id/itemDate18"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="18"
+            app:layout_constraintTop_toTopOf="@id/itemDate15"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate15"
+            app:layout_constraintStart_toEndOf="@id/itemDate17"
+            app:layout_constraintEnd_toStartOf="@id/itemDate19"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="19"
+            app:layout_constraintTop_toTopOf="@id/itemDate15"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate15"
+            app:layout_constraintStart_toEndOf="@id/itemDate18"
+            app:layout_constraintEnd_toStartOf="@id/itemDate20"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="20"
+            app:layout_constraintTop_toTopOf="@id/itemDate15"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate15"
+            app:layout_constraintStart_toEndOf="@id/itemDate19"
+            app:layout_constraintEnd_toStartOf="@id/itemDate21"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="21"
+            app:layout_constraintTop_toTopOf="@id/itemDate15"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate15"
+            app:layout_constraintStart_toEndOf="@id/itemDate20"
+            app:layout_constraintEnd_toEndOf="@id/itemDate7"/>
+
+        <!-- 22 ~ 28 -->
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:date="22"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/itemDate23"
+            app:layout_constraintTop_toBottomOf="@id/itemDate15" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="23"
+            app:layout_constraintTop_toTopOf="@id/itemDate22"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate22"
+            app:layout_constraintStart_toEndOf="@id/itemDate22"
+            app:layout_constraintEnd_toStartOf="@id/itemDate24"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="24"
+            app:layout_constraintTop_toTopOf="@id/itemDate22"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate22"
+            app:layout_constraintStart_toEndOf="@id/itemDate23"
+            app:layout_constraintEnd_toStartOf="@id/itemDate25"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="25"
+            app:layout_constraintTop_toTopOf="@id/itemDate22"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate22"
+            app:layout_constraintStart_toEndOf="@id/itemDate24"
+            app:layout_constraintEnd_toStartOf="@id/itemDate26"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="26"
+            app:layout_constraintTop_toTopOf="@id/itemDate22"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate22"
+            app:layout_constraintStart_toEndOf="@id/itemDate25"
+            app:layout_constraintEnd_toStartOf="@id/itemDate27"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="27"
+            app:layout_constraintTop_toTopOf="@id/itemDate22"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate22"
+            app:layout_constraintStart_toEndOf="@id/itemDate26"
+            app:layout_constraintEnd_toStartOf="@id/itemDate28"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="28"
+            app:layout_constraintTop_toTopOf="@id/itemDate22"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate22"
+            app:layout_constraintStart_toEndOf="@id/itemDate27"
+            app:layout_constraintEnd_toEndOf="@id/itemDate7"/>
+
+        <!-- 29 ~ 31 -->
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate29"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:date="29"
+            app:layout_constraintStart_toStartOf="@id/itemDate1"
+            app:layout_constraintEnd_toEndOf="@id/itemDate1"
+            app:layout_constraintTop_toBottomOf="@id/itemDate22" />
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="30"
+            app:layout_constraintTop_toTopOf="@id/itemDate29"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate29"
+            app:layout_constraintStart_toStartOf="@id/itemDate2"
+            app:layout_constraintEnd_toEndOf="@id/itemDate2"/>
+
+        <com.example.etcstudy.tenant.CustomCalendarItem
+            android:id="@+id/itemDate31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:date="31"
+            app:layout_constraintTop_toTopOf="@id/itemDate29"
+            app:layout_constraintBottom_toBottomOf="@id/itemDate29"
+            app:layout_constraintStart_toStartOf="@id/itemDate3"
+            app:layout_constraintEnd_toEndOf="@id/itemDate3"/>
+
+    </com.example.etcstudy.tenant.CustomCalendarGroup>
+
+    <TextView
+        android:id="@+id/textViewCancel"
+        style="@style/koreanTextSize16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:text="@string/cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/textViewSave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendarGroup" />
+
+    <TextView
+        android:id="@+id/textViewSave"
+        style="@style/koreanTextSize16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_rounded_main_mint_8"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:textColor="@color/white"
+        android:text="저장"
+        app:layout_constraintBottom_toBottomOf="@id/textViewCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/textViewCancel"
+        app:layout_constraintTop_toTopOf="@id/textViewCancel"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".tenant.RegisterTenantActivity">
+
+    <View
+        android:id="@+id/layoutTitle"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/main_mint"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/textViewRegister"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="40dp">
+
+            <TextView
+                android:id="@+id/labelRentRooms"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="28dp"
+                android:text="@string/rent_rooms"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewRentRooms"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="호수(호실)을 선택해주세요"
+                android:textColor="@color/style_stroke_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelRentRooms" />
+
+            <View
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_outline_interface_caret_down"
+                app:layout_constraintBottom_toBottomOf="@id/textViewRentRooms"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintTop_toTopOf="@id/textViewRentRooms" />
+
+            <TextView
+                android:id="@+id/labelRentRoomDirectInput"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/rent_rooms"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/textViewRentRooms" />
+
+            <TextView
+                android:id="@+id/labelRentRoomArea"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="평수"
+                app:layout_constraintStart_toStartOf="@id/editRentRoomArea"
+                app:layout_constraintTop_toTopOf="@id/labelRentRoomDirectInput" />
+
+            <EditText
+                android:id="@+id/editTextRentRoomDirect"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:gravity="end"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:text="102 호"
+                app:layout_constraintEnd_toStartOf="@id/editRentRoomArea"
+                app:layout_constraintStart_toStartOf="@id/labelRentRoomDirectInput"
+                app:layout_constraintTop_toBottomOf="@id/labelRentRoomDirectInput" />
+
+            <EditText
+                android:id="@+id/editRentRoomArea"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:gravity="end"
+                android:inputType="number"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="15dp"
+                android:text="105 ㎡"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toEndOf="@id/editTextRentRoomDirect"
+                app:layout_constraintTop_toTopOf="@id/editTextRentRoomDirect" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupDirectInput"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="labelRentRoomDirectInput, labelRentRoomArea, editTextRentRoomDirect, editRentRoomArea" />
+
+            <TextView
+                android:id="@+id/labelTenantName"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="임차인명"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/editTextRentRoomDirect" />
+
+            <EditText
+                android:id="@+id/editTextTenantName"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="김민재"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toStartOf="@id/textViewRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelTenantName" />
+
+            <TextView
+                android:id="@+id/labelTenantPhoneNumber"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="임차인 휴대폰번호"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/editTextTenantName" />
+
+            <EditText
+                android:id="@+id/editTextPhoneNumber"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:inputType="phone"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="010 - 0000 - 0000"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toStartOf="@id/textViewRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelTenantPhoneNumber" />
+
+            <TextView
+                android:id="@+id/labelContractType"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="계약 유형"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/editTextPhoneNumber" />
+
+            <TextView
+                android:id="@+id/textViewPrepayment"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_main_mint_8"
+                android:gravity="center"
+                android:paddingVertical="16dp"
+                android:text="선불"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toStartOf="@id/textViewDeferredPayment"
+                app:layout_constraintStart_toStartOf="@id/labelContractType"
+                app:layout_constraintTop_toBottomOf="@id/labelContractType" />
+
+            <TextView
+                android:id="@+id/textViewDeferredPayment"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="후불"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toEndOf="@id/textViewPrepayment"
+                app:layout_constraintTop_toTopOf="@id/textViewPrepayment" />
+
+            <TextView
+                android:id="@+id/labelPaymentDate"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="납입일"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/textViewPrepayment" />
+
+            <TextView
+                android:id="@+id/textPaymentDate"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="매월 5일"
+                android:textColor="@color/style_stroke_line"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelPaymentDate" />
+
+            <TextView
+                android:id="@+id/labelRent"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="임대료(월세)"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/textPaymentDate" />
+
+            <CheckBox
+                style="@style/koreanTextSize14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부가세 포함"
+                android:buttonTint="@color/main_mint"
+                app:layout_constraintBottom_toBottomOf="@id/labelRent"
+                app:layout_constraintEnd_toEndOf="@id/editTextRent"
+                app:layout_constraintTop_toTopOf="@id/labelRent" />
+
+            <EditText
+                android:id="@+id/editTextRent"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:gravity="end"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="100만원"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toStartOf="@id/textViewRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelRent" />
+
+            <TextView
+                android:id="@+id/labelAdministrativeExpenses"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="관리비"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/editTextRent" />
+
+            <CheckBox
+                style="@style/koreanTextSize14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="부가세 포함"
+                android:buttonTint="@color/main_mint"
+                app:layout_constraintBottom_toBottomOf="@id/labelAdministrativeExpenses"
+                app:layout_constraintEnd_toEndOf="@id/editTextAdministrativeExpenses"
+                app:layout_constraintTop_toTopOf="@id/labelAdministrativeExpenses" />
+
+            <EditText
+                android:id="@+id/editTextAdministrativeExpenses"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:gravity="end"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="100만원"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toStartOf="@id/textViewRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelAdministrativeExpenses" />
+
+            <TextView
+                android:id="@+id/labelSuperTax"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="부가세"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/editTextAdministrativeExpenses" />
+
+            <EditText
+                android:id="@+id/editTextSuperTax"
+                style="@style/koreanTextSize14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_rounded_border_style_stroke_line_8"
+                android:gravity="end"
+                android:inputType="text"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="15dp"
+                android:text="100만원"
+                app:layout_constraintEnd_toEndOf="@id/textViewRentRooms"
+                app:layout_constraintStart_toStartOf="@id/textViewRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/labelSuperTax" />
+
+            <TextView
+                android:id="@+id/labelFileAttach"
+                style="@style/koreanTextSize16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="파일첨부"
+                app:layout_constraintStart_toStartOf="@id/labelRentRooms"
+                app:layout_constraintTop_toBottomOf="@id/editTextSuperTax" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <TextView
+        style="@style/koreanTextSize16"
+        android:id="@+id/textViewRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:gravity="center"
+        android:text="등록"
+        android:textColor="@color/white"
+        android:background="@color/main_mint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
